@@ -23,4 +23,9 @@
     // Insert code here to tear down your application
 }
 
+- (IBAction)start:(id)sender {
+}
+
+- (IBAction)setBoardSize:(id)sender {
+}
 @end
