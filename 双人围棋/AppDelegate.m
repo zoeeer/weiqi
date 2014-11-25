@@ -8,15 +8,21 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+#import "Settings.h"
 
+@interface AppDelegate ()
 @property (weak) IBOutlet NSWindow *window;
+@property (strong) Settings* settings;
 @end
+
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    //[self.window setDocumentEdited:YES];
+
+    [self setSettings:[[Settings alloc] init]];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -24,8 +30,15 @@
 }
 
 - (IBAction)start:(id)sender {
+    NSLog(@"Board size is set to %ld", [self.settings board_size]);
 }
 
 - (IBAction)setBoardSize:(id)sender {
+    NSMenuItem *item = [sender selectedItem];
+    NSLog(@"Size changed to %@", item);
+    //NSLog(@"item title: %@", [item title]);
+    //NSLog(@"item tag: %ld", [item tag]);
+    [self.settings setBoard_size:[item tag]];
+    NSLog(@"Board size is set to %ld", [self.settings board_size]);
 }
 @end

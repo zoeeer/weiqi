@@ -694,17 +694,17 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thg-zp-Xr4">
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="19" translatesAutoresizingMaskIntoConstraints="NO" id="thg-zp-Xr4">
                         <rect key="frame" x="267" y="232" width="51" height="26"/>
-                        <popUpButtonCell key="cell" type="push" title="19" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="TbR-2Z-7xq" id="4ak-Zd-YPE">
+                        <popUpButtonCell key="cell" type="push" title="19" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="19" imageScaling="proportionallyDown" inset="2" selectedItem="TbR-2Z-7xq" id="4ak-Zd-YPE">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
                             <menu key="menu" id="Z91-Ys-5kj">
                                 <items>
-                                    <menuItem title="5" id="a6A-aE-Nks"/>
-                                    <menuItem title="9" id="TKf-qR-6uD"/>
-                                    <menuItem title="15" id="8y7-B3-aC0"/>
-                                    <menuItem title="19" state="on" id="TbR-2Z-7xq">
+                                    <menuItem title="5" tag="5" id="a6A-aE-Nks"/>
+                                    <menuItem title="9" tag="9" id="TKf-qR-6uD"/>
+                                    <menuItem title="15" tag="15" id="8y7-B3-aC0"/>
+                                    <menuItem title="19" state="on" tag="19" id="TbR-2Z-7xq">
                                         <modifierMask key="keyEquivalentModifierMask"/>
                                     </menuItem>
                                 </items>
