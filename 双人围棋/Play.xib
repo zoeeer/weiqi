@@ -17,37 +17,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="852" height="560"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDH-PY-mrp">
-                        <rect key="frame" x="197" y="162" width="344" height="344"/>
-                        <clipView key="contentView" ambiguous="YES" misplaced="YES" id="Rcy-z7-Q1u">
-                            <rect key="frame" x="1" y="1" width="248" height="158"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <collectionView hidden="YES" ambiguous="YES" maxNumberOfRows="9" maxNumberOfColumns="9" id="bEi-Oa-DBX">
-                                    <rect key="frame" x="0.0" y="0.0" width="248" height="158"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="primaryBackgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="secondaryBackgroundColor" name="controlAlternatingRowColor" catalog="System" colorSpace="catalog"/>
-                                    <connections>
-                                        <outlet property="itemPrototype" destination="JdP-z9-lb6" id="88j-qg-gib"/>
-                                    </connections>
-                                </collectionView>
-                            </subviews>
-                            <color key="backgroundColor" red="0.79643654340000003" green="0.57834124470000003" blue="0.17575458299999999" alpha="1" colorSpace="calibratedRGB"/>
-                        </clipView>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="VBC-RP-Hr0">
-                            <rect key="frame" x="1" y="144" width="233" height="15"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="lyV-fX-12e">
-                            <rect key="frame" x="234" y="1" width="15" height="143"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                    </scrollView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eMe-ym-OUv">
+                        <rect key="frame" x="40" y="40" width="480" height="480"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Board19" id="Gy6-xQ-W0D"/>
+                    </imageView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="539" y="369"/>
+            <point key="canvasLocation" x="400" y="369"/>
         </window>
-        <collectionViewItem id="JdP-z9-lb6"/>
     </objects>
+    <resources>
+        <image name="Board19" width="1024" height="1024"/>
+    </resources>
 </document>
