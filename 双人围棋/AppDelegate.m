@@ -23,6 +23,7 @@
     //[self.window setDocumentEdited:YES];
 
     [self setSettings:[[Settings alloc] init]];
+    [self.settings setBoard_size:19];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

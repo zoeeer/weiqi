@@ -33,7 +33,7 @@
 "4EN-yA-p0u.title" = "Find";
 
 /* Class = "NSMenuItem"; title = "Quit 双人围棋"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "Quit 双人围棋";
+"4sb-4s-VLi.title" = "退出 双人围棋";
 
 /* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
 "5QF-Oa-p0T.title" = "Edit";
@@ -42,7 +42,7 @@
 "5Vv-lz-BsD.title" = "Copy Style";
 
 /* Class = "NSMenuItem"; title = "About 双人围棋"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "About 双人围棋";
+"5kV-Vb-QxS.title" = "关于 双人围棋";
 
 /* Class = "NSMenuItem"; title = "Redo"; ObjectID = "6dh-zS-Vam"; */
 "6dh-zS-Vam.title" = "Redo";
@@ -63,19 +63,19 @@
 "9yt-4B-nSM.title" = "Smart Copy/Paste";
 
 /* Class = "NSTextFieldCell"; title = "Board Size"; ObjectID = "AO3-uZ-xV1"; */
-"AO3-uZ-xV1.title" = "Board Size";
+"AO3-uZ-xV1.title" = "棋盘大小";
 
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
 "AYu-sK-qS6.title" = "Main Menu";
 
 /* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
-"BOF-NM-1cW.title" = "Preferences…";
+"BOF-NM-1cW.title" = "首选项…";
 
 /* Class = "NSMenuItem"; title = "\tLeft to Right"; ObjectID = "BgM-ve-c93"; */
 "BgM-ve-c93.title" = "\tLeft to Right";
 
 /* Class = "NSMenuItem"; title = "Save As…"; ObjectID = "Bw7-FT-i3A"; */
-"Bw7-FT-i3A.title" = "Save As…";
+"Bw7-FT-i3A.title" = "另存为…";
 
 /* Class = "NSMenuItem"; title = "Close"; ObjectID = "DVo-aG-piG"; */
 "DVo-aG-piG.title" = "Close";
@@ -84,7 +84,7 @@
 "Dv1-io-Yv7.title" = "Spelling and Grammar";
 
 /* Class = "NSButtonCell"; title = "Start"; ObjectID = "E22-YG-Dcp"; */
-"E22-YG-Dcp.title" = "Start";
+"E22-YG-Dcp.title" = "开局";
 
 /* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
 "F2S-fz-NVQ.title" = "Help";
