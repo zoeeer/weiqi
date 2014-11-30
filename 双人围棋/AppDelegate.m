@@ -30,6 +30,18 @@
     // Insert code here to tear down your application
 }
 
+// -------------------------------------------------------------------------------
+//	applicationShouldTerminateAfterLastWindowClosed:sender
+//
+//	NSApplication delegate method placed here so the sample conveniently quits
+//	after we close the window.
+// -------------------------------------------------------------------------------
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
+{
+    return YES;
+}
+
+
 - (IBAction)start:(id)sender {
     NSLog(@"Board size is set to %ld", [self.settings board_size]);
 }

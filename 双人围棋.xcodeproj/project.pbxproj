@@ -10,6 +10,7 @@
 		262A8AB31A1BA93600E246F4 /* Play.xib in Resources */ = {isa = PBXBuildFile; fileRef = 262A8AB21A1BA93600E246F4 /* Play.xib */; };
 		262A8AED1A21EFE400E246F4 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 262A8AEC1A21EFE400E246F4 /* Game.m */; };
 		262A8AF01A21F16D00E246F4 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 262A8AEF1A21F16D00E246F4 /* Settings.m */; };
+		262A8B251A2B62B600E246F4 /* MyWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262A8B241A2B62B600E246F4 /* MyWindowController.m */; };
 		26FE2F981A1B989E00A5C566 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2F971A1B989E00A5C566 /* AppDelegate.m */; };
 		26FE2F9A1A1B989E00A5C566 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2F991A1B989E00A5C566 /* main.m */; };
 		26FE2F9C1A1B989F00A5C566 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FE2F9B1A1B989F00A5C566 /* Images.xcassets */; };
@@ -37,6 +38,8 @@
 		262A8AEC1A21EFE400E246F4 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		262A8AEE1A21F16D00E246F4 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		262A8AEF1A21F16D00E246F4 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		262A8B231A2B62B600E246F4 /* MyWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWindowController.h; sourceTree = "<group>"; };
+		262A8B241A2B62B600E246F4 /* MyWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWindowController.m; sourceTree = "<group>"; };
 		26FE2F911A1B989E00A5C566 /* 双人围棋.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "双人围棋.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FE2F951A1B989E00A5C566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26FE2F961A1B989E00A5C566 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,7 +75,8 @@
 		26FE2F881A1B989E00A5C566 = {
 			isa = PBXGroup;
 			children = (
-				26FE2F931A1B989E00A5C566 /* 双人围棋 */,
+				26FE2F941A1B989E00A5C566 /* Resources */,
+				26FE2F931A1B989E00A5C566 /* Classes */,
 				26FE2FA71A1B989F00A5C566 /* 双人围棋Tests */,
 				26FE2F921A1B989E00A5C566 /* Products */,
 			);
@@ -87,33 +91,36 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		26FE2F931A1B989E00A5C566 /* 双人围棋 */ = {
+		26FE2F931A1B989E00A5C566 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				262A8AE81A1F7B0500E246F4 /* 双人围棋.entitlements */,
+				26FE2F991A1B989E00A5C566 /* main.m */,
 				26FE2F961A1B989E00A5C566 /* AppDelegate.h */,
 				26FE2F971A1B989E00A5C566 /* AppDelegate.m */,
-				26FE2F9B1A1B989F00A5C566 /* Images.xcassets */,
-				26FE2F9D1A1B989F00A5C566 /* MainMenu.xib */,
 				262A8AEB1A21EFE400E246F4 /* Game.h */,
+				262A8B231A2B62B600E246F4 /* MyWindowController.h */,
+				262A8B241A2B62B600E246F4 /* MyWindowController.m */,
 				262A8AEE1A21F16D00E246F4 /* Settings.h */,
 				262A8AEF1A21F16D00E246F4 /* Settings.m */,
 				262A8AEC1A21EFE400E246F4 /* Game.m */,
-				262A8AB21A1BA93600E246F4 /* Play.xib */,
 				26FE2FB41A1B995D00A5C566 /* Board.h */,
 				26FE2FB51A1B995D00A5C566 /* Board.m */,
-				26FE2F941A1B989E00A5C566 /* Supporting Files */,
 			);
+			name = Classes;
 			path = "双人围棋";
 			sourceTree = "<group>";
 		};
-		26FE2F941A1B989E00A5C566 /* Supporting Files */ = {
+		26FE2F941A1B989E00A5C566 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				262A8AE81A1F7B0500E246F4 /* 双人围棋.entitlements */,
+				26FE2F9B1A1B989F00A5C566 /* Images.xcassets */,
+				26FE2F9D1A1B989F00A5C566 /* MainMenu.xib */,
+				262A8AB21A1BA93600E246F4 /* Play.xib */,
 				26FE2F951A1B989E00A5C566 /* Info.plist */,
-				26FE2F991A1B989E00A5C566 /* main.m */,
 			);
-			name = "Supporting Files";
+			name = Resources;
+			path = "双人围棋";
 			sourceTree = "<group>";
 		};
 		26FE2FA71A1B989F00A5C566 /* 双人围棋Tests */ = {
@@ -243,6 +250,7 @@
 				262A8AF01A21F16D00E246F4 /* Settings.m in Sources */,
 				26FE2F981A1B989E00A5C566 /* AppDelegate.m in Sources */,
 				262A8AED1A21EFE400E246F4 /* Game.m in Sources */,
+				262A8B251A2B62B600E246F4 /* MyWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
