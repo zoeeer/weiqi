@@ -38,8 +38,8 @@
     // make sure we resize the viewController's view to match its super view
     [[viewController view] setFrame:[myTargetView bounds]];
     
-    [viewController setSortingMode:0];		// ascending sort order
-    [viewController setAlternateColors:NO];	// no alternate background colors (initially use gradient background)
+    //[viewController setSortingMode:0];		// ascending sort order
+    //[viewController setAlternateColors:NO];	// no alternate background colors (initially use gradient background)
 }
 
 @end

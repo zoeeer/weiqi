@@ -675,48 +675,70 @@
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hN5-F8-nX3">
-                        <rect key="frame" x="200" y="108" width="80" height="48"/>
-                        <buttonCell key="cell" type="square" title="Start" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="E22-YG-Dcp">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system" size="18"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="start:" target="Voe-Tx-rLC" id="Lpe-7v-X0U"/>
-                        </connections>
-                    </button>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5NS-Do-XyX">
-                        <rect key="frame" x="151" y="237" width="112" height="20"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Board Size" usesSingleLineMode="YES" id="AO3-uZ-xV1">
-                            <font key="font" metaFont="system" size="18"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="19" translatesAutoresizingMaskIntoConstraints="NO" id="thg-zp-Xr4">
-                        <rect key="frame" x="267" y="232" width="51" height="26"/>
-                        <popUpButtonCell key="cell" type="push" title="19" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="19" imageScaling="proportionallyDown" inset="2" selectedItem="TbR-2Z-7xq" id="4ak-Zd-YPE">
-                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="menu"/>
-                            <menu key="menu" id="Z91-Ys-5kj">
-                                <items>
-                                    <menuItem title="5" tag="5" id="a6A-aE-Nks"/>
-                                    <menuItem title="9" tag="9" id="TKf-qR-6uD"/>
-                                    <menuItem title="15" tag="15" id="8y7-B3-aC0"/>
-                                    <menuItem title="19" state="on" tag="19" id="TbR-2Z-7xq">
-                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                    </menuItem>
-                                </items>
-                            </menu>
-                        </popUpButtonCell>
-                        <connections>
-                            <action selector="setBoardSize:" target="Voe-Tx-rLC" id="jo7-Ak-p99"/>
-                        </connections>
-                    </popUpButton>
-                </subviews>
             </view>
             <point key="canvasLocation" x="327" y="352"/>
         </window>
+        <customView id="nEV-0z-igX" userLabel="Startup View">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZX2-MG-Szw">
+                    <rect key="frame" x="154" y="172" width="95" height="22"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Board Size" id="298-a5-Xws">
+                        <font key="font" metaFont="system" size="18"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="19" translatesAutoresizingMaskIntoConstraints="NO" id="7z3-UT-rAN" userLabel="select_size">
+                    <rect key="frame" x="267" y="169" width="59" height="26"/>
+                    <popUpButtonCell key="cell" type="push" title="19" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="19" imageScaling="proportionallyDown" inset="2" selectedItem="com-JO-ARb" id="xWo-sx-MSJ">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="2QK-fQ-gnh">
+                            <items>
+                                <menuItem title="5" tag="5" id="8mV-8s-OND"/>
+                                <menuItem title="9" tag="9" id="oZm-mo-fYL"/>
+                                <menuItem title="15" tag="15" id="i9p-Tc-tMf"/>
+                                <menuItem title="19" state="on" tag="19" id="com-JO-ARb" userLabel="19"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="setBoardSize:" target="Voe-Tx-rLC" id="nzS-e5-c56"/>
+                    </connections>
+                </popUpButton>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IsQ-DG-4nu">
+                    <rect key="frame" x="200" y="48" width="80" height="48"/>
+                    <buttonCell key="cell" type="square" title="Start" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Trt-u7-70Y">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system" size="18"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="start:" target="Voe-Tx-rLC" id="LQD-to-AdD"/>
+                    </connections>
+                </button>
+            </subviews>
+            <point key="canvasLocation" x="335" y="794"/>
+        </customView>
+        <splitView dividerStyle="paneSplitter" vertical="YES" id="iki-v6-UES" userLabel="Game View">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView fixedFrame="YES" id="Tx3-Hg-5gK">
+                    <rect key="frame" x="0.0" y="0.0" width="236.5" height="320"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </customView>
+                <customView fixedFrame="YES" id="tpc-Nh-Alw">
+                    <rect key="frame" x="246.5" y="0.0" width="233.5" height="320"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </customView>
+            </subviews>
+            <holdingPriorities>
+                <real value="250"/>
+                <real value="250"/>
+            </holdingPriorities>
+            <point key="canvasLocation" x="335" y="1228"/>
+        </splitView>
     </objects>
 </document>

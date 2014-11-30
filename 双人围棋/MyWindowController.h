@@ -8,6 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "MyViewController.h"
+
 @interface MyWindowController : NSWindowController
+{
+    MyViewController *viewController;
+    IBOutlet NSView	*myTargetView;
+    IBOutlet NSTextField *selectionField;
+}
 
 @end
