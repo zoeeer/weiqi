@@ -670,11 +670,44 @@
         <window title="Weiqi" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
+            <rect key="contentRect" x="335" y="390" width="720" height="520"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="720" height="520"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <splitView fixedFrame="YES" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iki-v6-UES" userLabel="Game View">
+                        <rect key="frame" x="17" y="42" width="687" height="437"/>
+                        <subviews>
+                            <customView fixedFrame="YES" id="Tx3-Hg-5gK">
+                                <rect key="frame" x="0.0" y="0.0" width="441" height="437"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7vv-6U-HWG">
+                                        <rect key="frame" x="20" y="17" width="400" height="400"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="wood texture" id="T1s-ad-Arw"/>
+                                    </imageView>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bwn-Ba-mI6">
+                                        <rect key="frame" x="40" y="37" width="360" height="360"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="board9" id="FJi-Z8-3eP"/>
+                                    </imageView>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5hl-9j-yUx">
+                                        <rect key="frame" x="332" y="50" width="30" height="30"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="nSD-0X-qdv"/>
+                                    </imageView>
+                                </subviews>
+                            </customView>
+                            <customView fixedFrame="YES" id="tpc-Nh-Alw">
+                                <rect key="frame" x="451" y="0.0" width="236" height="437"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </customView>
+                        </subviews>
+                        <holdingPriorities>
+                            <real value="250"/>
+                            <real value="250"/>
+                        </holdingPriorities>
+                    </splitView>
+                </subviews>
             </view>
             <point key="canvasLocation" x="327" y="352"/>
         </window>
@@ -721,24 +754,22 @@
             </subviews>
             <point key="canvasLocation" x="335" y="794"/>
         </customView>
-        <splitView dividerStyle="paneSplitter" vertical="YES" id="iki-v6-UES" userLabel="Game View">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="xmu-S5-v79">
+            <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <subviews>
-                <customView fixedFrame="YES" id="Tx3-Hg-5gK">
-                    <rect key="frame" x="0.0" y="0.0" width="236.5" height="320"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                </customView>
-                <customView fixedFrame="YES" id="tpc-Nh-Alw">
-                    <rect key="frame" x="246.5" y="0.0" width="233.5" height="320"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                </customView>
-            </subviews>
-            <holdingPriorities>
-                <real value="250"/>
-                <real value="250"/>
-            </holdingPriorities>
-            <point key="canvasLocation" x="335" y="1228"/>
-        </splitView>
+            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="black" id="vea-iG-lFA"/>
+        </imageView>
+        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="cOn-gB-Q9M">
+            <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="white" id="hsX-Z2-8UK"/>
+            <point key="canvasLocation" x="666" y="828"/>
+        </imageView>
     </objects>
+    <resources>
+        <image name="black" width="38" height="38"/>
+        <image name="board9" width="326" height="326"/>
+        <image name="white" width="38" height="38"/>
+        <image name="wood texture" width="7854" height="3490"/>
+    </resources>
 </document>
