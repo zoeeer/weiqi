@@ -670,7 +670,7 @@
         <window title="Weiqi" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="720" height="520"/>
+            <rect key="contentRect" x="317" y="192" width="720" height="520"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="720" height="520"/>
@@ -699,7 +699,7 @@
                     </customView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="327" y="409"/>
+            <point key="canvasLocation" x="15" y="-1054"/>
         </window>
         <customView id="nEV-0z-igX" userLabel="Startup View">
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
