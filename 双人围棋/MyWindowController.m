@@ -30,7 +30,7 @@
     
     // load our nib that contains the collection view
     [self willChangeValueForKey:@"startupView"];
-    startupView = [[MyViewController alloc] initWithNibName:@"MyViewController" bundle:nil];
+    startupView = [[MyViewController alloc] initWithNibName:@"Startup" bundle:nil];
     [self didChangeValueForKey:@"startupView"];
     
     [myTargetView addSubview:[startupView view]];
