@@ -12,9 +12,9 @@
 
 @interface MyWindowController : NSWindowController
 {
-    MyViewController *viewController;
+    MyViewController *startupView;
+    MyViewController *gameView;
     IBOutlet NSView	*myTargetView;
-    IBOutlet NSTextField *selectionField;
 }
 
 @end

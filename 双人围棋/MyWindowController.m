@@ -23,20 +23,20 @@
 // -------------------------------------------------------------------------------
 //	awakeFromNib:
 // -------------------------------------------------------------------------------
-- (void)awakeFromNib:(NSString*)nibName
+- (void)awakeFromNib
 {
     //[[self window] setAutorecalculatesContentBorderThickness:YES forEdge:NSMinYEdge];
     //[[self window] setContentBorderThickness:30 forEdge:NSMinYEdge];
     
     // load our nib that contains the collection view
-    [self willChangeValueForKey:@"viewController"];
-    viewController = [[MyViewController alloc] initWithNibName:nibName bundle:nil];
-    [self didChangeValueForKey:@"viewController"];
+    [self willChangeValueForKey:@"startupView"];
+    startupView = [[MyViewController alloc] initWithNibName:@"MyViewController" bundle:nil];
+    [self didChangeValueForKey:@"startupView"];
     
-    [myTargetView addSubview:[viewController view]];
+    [myTargetView addSubview:[startupView view]];
     
     // make sure we resize the viewController's view to match its super view
-    [[viewController view] setFrame:[myTargetView bounds]];
+    [[startupView view] setFrame:[myTargetView bounds]];
     
     //[viewController setSortingMode:0];		// ascending sort order
     //[viewController setAlternateColors:NO];	// no alternate background colors (initially use gradient background)
