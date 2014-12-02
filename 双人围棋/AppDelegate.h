@@ -8,9 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
+//@class MyWindowController;
 @class Board;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
+
 
 - (IBAction)start:(id)sender;
 - (IBAction)setBoardSize:(id)sender;

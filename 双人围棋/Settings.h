@@ -11,5 +11,5 @@
 @interface Settings : NSObject
 
 @property (assign) NSInteger board_size;
-@property (assign) NSInteger players;
+@property (assign) NSInteger mode;    // 0: man-man; 1: man-machine; 2: machine-man
 @end

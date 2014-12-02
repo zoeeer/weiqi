@@ -12,7 +12,7 @@
 
 @interface MyWindowController : NSWindowController
 {
-    MyViewController *startupView;
+    NSViewController *startupView;
     MyViewController *gameView;
     IBOutlet NSView	*myTargetView;
 }
