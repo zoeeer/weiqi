@@ -8,9 +8,19 @@
 
 #import <Cocoa/Cocoa.h>
 
+//@class MyWindowController;
 @class Board;
+@class Settings;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
+{
+    Settings *settings;
+    //IBOutlet NSButton *startButton;
+}
+
+@property (weak) IBOutlet NSButton *startButton;
+
+@property (strong, nonatomic) Settings* settings;
 
 - (IBAction)start:(id)sender;
 - (IBAction)setBoardSize:(id)sender;
