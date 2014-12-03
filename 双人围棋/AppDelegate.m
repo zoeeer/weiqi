@@ -12,11 +12,12 @@
 
 @interface AppDelegate ()
 //@property (weak) IBOutlet NSWindow *window;
-@property (strong) Settings* settings;
 @end
 
 
 @implementation AppDelegate
+
+@synthesize settings;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
@@ -45,6 +46,9 @@
 
 - (IBAction)start:(id)sender {
     NSLog(@"Board size is set to %ld", [self.settings board_size]);
+    if (! self.settings) {
+        NSLog(@"self.settings no longer exist!!");
+    }
 }
 
 - (IBAction)setBoardSize:(id)sender {
@@ -55,5 +59,8 @@
     //NSLog(@"item tag: %ld", [item tag]);
     [self.settings setBoard_size:[item tag]];
     NSLog(@"Board size is set to %ld", [self.settings board_size]);
+    if (! self.settings) {
+        NSLog(@"self.settings no longer exist!!");
+    }
 }
 @end

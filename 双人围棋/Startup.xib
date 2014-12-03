@@ -12,7 +12,6 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="dKt-5P-2WD" customClass="AppDelegate"/>
         <customView id="Hz6-mo-xeY">
             <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -39,9 +38,6 @@
                             </items>
                         </menu>
                     </popUpButtonCell>
-                    <connections>
-                        <action selector="setBoardSize:" target="dKt-5P-2WD" id="wcT-gF-JTY"/>
-                    </connections>
                 </popUpButton>
                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t6f-tV-8Pc">
                     <rect key="frame" x="201" y="43" width="80" height="48"/>
@@ -49,9 +45,6 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="18"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="start:" target="dKt-5P-2WD" id="2Ke-4E-n2h"/>
-                    </connections>
                 </button>
             </subviews>
         </customView>

@@ -10,4 +10,9 @@
 
 @implementation Settings
 
+- (void) dealloc
+{
+    NSLog(@"settings will dealloc");
+}
+
 @end
