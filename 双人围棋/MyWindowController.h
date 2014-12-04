@@ -10,11 +10,20 @@
 
 #import "MyViewController.h"
 
+@class Board;
+@class Settings;
+
 @interface MyWindowController : NSWindowController
 {
-    NSViewController *startupView;
-    MyViewController *gameView;
-    IBOutlet NSView	*myTargetView;
+    //    NSViewController *startupView;
+    //    MyViewController *gameView;
+    __weak IBOutlet NSView *startupView;
+    __weak IBOutlet NSView	*myTargetView;
 }
+
+@property (strong, nonatomic) Settings* settings;
+
+- (IBAction)start:(id)sender;
+- (IBAction)setBoardSize:(id)sender;
 
 @end
