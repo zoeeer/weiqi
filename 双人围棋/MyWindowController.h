@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "MyViewController.h"
+#import "GameViewController.h"
 
 @class Board;
 @class Settings;
@@ -16,7 +16,7 @@
 @interface MyWindowController : NSWindowController
 {
     //    NSViewController *startupView;
-    //    MyViewController *gameView;
+    GameViewController *gameViewController;
     __weak IBOutlet NSView *startupView;
     __weak IBOutlet NSView	*myTargetView;
 }

@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Rang. All rights reserved.
 //
 
-#import "MyViewController.h"
+#import "GameViewController.h"
 
-@interface MyViewController ()
+@interface GameViewController ()
 
 @end
 
-@implementation MyViewController
+@implementation GameViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

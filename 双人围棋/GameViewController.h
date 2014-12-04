@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface MyViewController : NSViewController
+@interface GameViewController : NSViewController
 
 @end

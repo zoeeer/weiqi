@@ -7,6 +7,7 @@
 //
 
 #import "MyWindowController.h"
+#import "GameViewController.h"
 
 #import "Settings.h"
 
@@ -51,6 +52,13 @@
 //    if (! self.settings) {
 //        NSLog(@"self.settings no longer exist!!");
 //    }
+    
+    // initialize game view
+    [self willChangeValueForKey:@"gameViewController"];
+    gameViewController = [[GameViewController alloc] initWithNibName:@"Game" bundle:nil];
+    [self didChangeValueForKey:@"gameViewController"];
+    // Switch startup view to game view
+    [myTargetView replaceSubview:startupView with:[gameViewController view]];
 }
 
 - (IBAction)setBoardSize:(id)sender {
