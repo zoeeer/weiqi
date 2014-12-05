@@ -63,20 +63,13 @@
     NSRect frame = [[self window] frame];
     NSSize contentSize = myTargetView.frame.size;
     NSSize targetSize = [gameViewController view].frame.size;
-    frame.origin.y -= targetSize.height - contentSize.height;
-    frame.size.width += targetSize.width - contentSize.width;
+    // For simplicity in early version, only show the board
+    frame.size.width += targetSize.height - contentSize.width;
     frame.size.height += targetSize.height - contentSize.height;
+    frame.origin.y -= targetSize.height - contentSize.height;
     NSLog(@"modified window origin is %f, %f", frame.origin.x, frame.origin.y);
     [[self window] setFrame:frame display:YES animate:YES];
    // [[self window] setContentSize:[gameViewController view].frame.size];
-    //[myTargetView setFrameSize:[gameViewController view].frame.size];
-    //[myTargetView setFrameOrigin:CGPointMake(0, 0)];
-//    [[self window] setContentSize:myTargetView.frame.size];
-    NSLog(@"modified myTargetView size is %f, %f", myTargetView.frame.size.height, myTargetView.frame.size.width);
-//    [[self window] setFrame:myTargetView.frame display:YES];
-    NSLog(@"modified window size is %f, %f", [self window].frame.size.height, [self window].frame.size.width);
-//    [myTargetView addSubview:[gameViewController view]];
-    NSLog(@"modified window origin is %f, %f", [self window].frame.origin.x, [self window].frame.origin.y);
 
     [myTargetView addSubview:[gameViewController view]];
     [[gameViewController view]  setFrame:[myTargetView bounds]];
