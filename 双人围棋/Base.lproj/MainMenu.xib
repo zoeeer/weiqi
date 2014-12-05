@@ -14,7 +14,6 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
                 <outlet property="windowController" destination="cz6-9m-4Gw" id="Y7U-nf-SzG"/>
             </connections>
         </customObject>
@@ -676,18 +675,14 @@
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9vp-GJ-kd4">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
-                    </customView>
-                </subviews>
             </view>
             <point key="canvasLocation" x="327" y="352"/>
         </window>
         <customObject id="cz6-9m-4Gw" userLabel="Window Controller" customClass="MyWindowController">
             <connections>
-                <outlet property="myTargetView" destination="9vp-GJ-kd4" id="h04-Xv-L36"/>
+                <outlet property="myTargetView" destination="EiT-Mj-1SZ" id="HMf-f6-iop"/>
                 <outlet property="startupView" destination="F0B-xT-KtS" id="EcU-gi-esn"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="vzG-Dr-sei"/>
             </connections>
         </customObject>
         <customView id="F0B-xT-KtS" userLabel="StartupView">

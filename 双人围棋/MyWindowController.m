@@ -32,11 +32,6 @@
     //[[self window] setAutorecalculatesContentBorderThickness:YES forEdge:NSMinYEdge];
     //[[self window] setContentBorderThickness:30 forEdge:NSMinYEdge];
     
-    // load our nib that contains the collection view
-/*    [self willChangeValueForKey:@"startupView"];
-    startupView = [[MyViewController alloc] initWithNibName:@"Startup" bundle:nil];
-    [self didChangeValueForKey:@"startupView"];*/
-    
     [myTargetView addSubview:startupView];
     
     // make sure we resize the viewController's view to match its super view
@@ -53,17 +48,38 @@
 //        NSLog(@"self.settings no longer exist!!");
 //    }
     
-    // initialize game view
+    // initialize game view from nib file
     [self willChangeValueForKey:@"gameViewController"];
     gameViewController = [[GameViewController alloc] initWithNibName:@"Game" bundle:nil];
     [self didChangeValueForKey:@"gameViewController"];
+    
+    NSLog(@"Initial window size is %f, %f", [self window].frame.size.height, [self window].frame.size.width);
+    NSLog(@"Initial window origin is %f, %f", [self window].frame.origin.x, [self window].frame.origin.y);
+    NSLog(@"gameView size is %f, %f", [gameViewController view].frame.size.height, [gameViewController view].frame.size.width);
+    
     // Switch startup view to game view
 //    [myTargetView replaceSubview:startupView with:[gameViewController view]];
     [startupView removeFromSuperview];
-    [[self window] setContentSize:[gameViewController view].frame.size];
-    [myTargetView setFrame:[myTargetView bounds]];
-    [myTargetView addSubview:[gameViewController view]];
+    NSRect frame = [[self window] frame];
+    NSSize contentSize = myTargetView.frame.size;
+    NSSize targetSize = [gameViewController view].frame.size;
+    frame.origin.y -= targetSize.height - contentSize.height;
+    frame.size.width += targetSize.width - contentSize.width;
+    frame.size.height += targetSize.height - contentSize.height;
+    NSLog(@"modified window origin is %f, %f", frame.origin.x, frame.origin.y);
+    [[self window] setFrame:frame display:YES animate:YES];
+   // [[self window] setContentSize:[gameViewController view].frame.size];
+    //[myTargetView setFrameSize:[gameViewController view].frame.size];
+    //[myTargetView setFrameOrigin:CGPointMake(0, 0)];
+//    [[self window] setContentSize:myTargetView.frame.size];
+    NSLog(@"modified myTargetView size is %f, %f", myTargetView.frame.size.height, myTargetView.frame.size.width);
+//    [[self window] setFrame:myTargetView.frame display:YES];
+    NSLog(@"modified window size is %f, %f", [self window].frame.size.height, [self window].frame.size.width);
+//    [myTargetView addSubview:[gameViewController view]];
+    NSLog(@"modified window origin is %f, %f", [self window].frame.origin.x, [self window].frame.origin.y);
 
+    [myTargetView addSubview:[gameViewController view]];
+    [[gameViewController view]  setFrame:[myTargetView bounds]];
 }
 
 - (IBAction)setBoardSize:(id)sender {
