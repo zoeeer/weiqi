@@ -58,7 +58,12 @@
     gameViewController = [[GameViewController alloc] initWithNibName:@"Game" bundle:nil];
     [self didChangeValueForKey:@"gameViewController"];
     // Switch startup view to game view
-    [myTargetView replaceSubview:startupView with:[gameViewController view]];
+//    [myTargetView replaceSubview:startupView with:[gameViewController view]];
+    [startupView removeFromSuperview];
+    [[self window] setContentSize:[gameViewController view].frame.size];
+    [myTargetView setFrame:[myTargetView bounds]];
+    [myTargetView addSubview:[gameViewController view]];
+
 }
 
 - (IBAction)setBoardSize:(id)sender {
