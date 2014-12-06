@@ -8,13 +8,22 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "MyViewController.h"
+#import "GameViewController.h"
+
+@class Board;
+@class Settings;
 
 @interface MyWindowController : NSWindowController
 {
-    NSViewController *startupView;
-    MyViewController *gameView;
-    IBOutlet NSView	*myTargetView;
+    //    NSViewController *startupView;
+    GameViewController *gameViewController;
+    __weak IBOutlet NSView *startupView;
+    __weak IBOutlet NSView	*myTargetView;
 }
+
+@property (strong, nonatomic) Settings* settings;
+
+- (IBAction)start:(id)sender;
+- (IBAction)setBoardSize:(id)sender;
 
 @end
