@@ -12,8 +12,17 @@
 @property (weak) IBOutlet NSImageView *image;
 @property (weak) IBOutlet NSTextField *seqnum;
 
+-(void)mouseDown:(NSEvent *)event;
+@end
+
+
+@interface BoardView : NSImageView
+
 @end
 
 @interface GameViewController : NSViewController
+{
+    BOOL isHumanGo;
+}
 
 @end

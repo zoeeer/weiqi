@@ -7,7 +7,36 @@
 //
 
 #import "Game.h"
+#import "Settings.h"
+
+@implementation Player
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+        [self setColor:NONE];
+    }
+    return self;
+}
+
+@end
 
 @implementation Game
+
+- (id)initWithSettings:(Settings *)settings
+{
+    [self setBoardsize:[settings board_size]];
+    [self setHandicap:[settings handicap]];
+    [self setKomi:[settings komi]];
+    
+    [self setPlayer1:[[Player alloc] init]];
+    [self setPlayer2:[[Player alloc] init]];
+    [[self player1] setColor:BLACK];
+    [[self player2] setColor:WHITE];
+    [[self player1] setNext:[self player2]];
+    [[self player1] setNext:[self player1]];
+    
+    return self;
+}
 
 @end

@@ -10,6 +10,7 @@
 #import "GameViewController.h"
 
 #import "Settings.h"
+#import "Game.h"
 
 @interface MyWindowController ()
 
@@ -73,6 +74,11 @@
 
     [myTargetView addSubview:[gameViewController view]];
     [[gameViewController view]  setFrame:[myTargetView bounds]];
+    
+    
+    // Create game objects
+    game = [[Game alloc] init];
+    [game initWithSettings:[self settings]];
 }
 
 - (IBAction)setBoardSize:(id)sender {

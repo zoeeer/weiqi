@@ -8,6 +8,20 @@
 
 #import "GameViewController.h"
 
+@implementation BoardView
+
+-(void)mouseDown:(NSEvent *)event
+{
+    NSPoint clickLocation;
+    BOOL itemHit=NO;
+    
+    // convert the mouse-down location into the view coords
+    clickLocation = [self convertPoint:[event locationInWindow]
+                              fromView:nil];
+}
+
+@end
+
 @interface GameViewController ()
 
 @end

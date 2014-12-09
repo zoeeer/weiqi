@@ -20,7 +20,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="wood texture" id="5qw-AY-GHM"/>
                 </imageView>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6sh-Ca-K1K">
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6sh-Ca-K1K" customClass="BoardView">
                     <rect key="frame" x="20" y="20" width="360" height="360"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="board9" id="vSw-KN-7vf"/>
                 </imageView>
