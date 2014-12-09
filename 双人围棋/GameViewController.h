@@ -8,6 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
+@interface StoneCell : NSBox
+@property (weak) IBOutlet NSImageView *image;
+@property (weak) IBOutlet NSTextField *seqnum;
+
+@end
+
 @interface GameViewController : NSViewController
 
 @end
