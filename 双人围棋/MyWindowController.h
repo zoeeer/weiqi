@@ -16,10 +16,6 @@
 
 @interface MyWindowController : NSWindowController
 {
-    // Model components
-    Settings *settings;
-    Game *game;
-    
     //    NSViewController *startupView;
     GameViewController *gameViewController;
     __weak IBOutlet NSView *startupView;

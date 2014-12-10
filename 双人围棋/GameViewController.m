@@ -7,6 +7,7 @@
 //
 
 #import "GameViewController.h"
+#import "Game.h"
 
 @implementation BoardView
 
@@ -31,6 +32,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
+
+    //NSLog(@"viewDidLoad");
+}
+
+- (instancetype)initWithSettings:(Settings *)settings
+{
+    if (self = [super initWithNibName:@"Game" bundle:nil]) {
+        // init board view according to board size
+    }
+    // Create game objects
+    game = [[Game alloc] initWithSettings:settings];
+    NSLog(@"game view controller initWithSettings");
+
+    return self;
 }
 
 @end

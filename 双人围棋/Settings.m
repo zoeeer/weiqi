@@ -15,4 +15,12 @@
     NSLog(@"settings will dealloc");
 }
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        [self setBoard_size:9];
+    }
+    return self;
+}
+
 @end

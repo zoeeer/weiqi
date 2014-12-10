@@ -699,15 +699,15 @@
                 </textField>
                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="19" translatesAutoresizingMaskIntoConstraints="NO" id="RV3-E0-8Xq" userLabel="select_size">
                     <rect key="frame" x="268" y="164" width="59" height="26"/>
-                    <popUpButtonCell key="cell" type="push" title="19" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="19" imageScaling="proportionallyDown" inset="2" selectedItem="PkG-Pq-YIk" id="DNp-Un-tQ3">
+                    <popUpButtonCell key="cell" type="push" title="9" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="9" imageScaling="proportionallyDown" inset="2" selectedItem="8Wl-0B-iwI" id="DNp-Un-tQ3">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="menu"/>
                         <menu key="menu" id="Yrm-eM-4FK">
                             <items>
                                 <menuItem title="5" tag="5" id="Yuw-JC-3Qo"/>
-                                <menuItem title="9" tag="9" id="8Wl-0B-iwI"/>
+                                <menuItem title="9" state="on" tag="9" id="8Wl-0B-iwI"/>
                                 <menuItem title="15" tag="15" id="19T-dH-c7V"/>
-                                <menuItem title="19" state="on" tag="19" id="PkG-Pq-YIk" userLabel="19"/>
+                                <menuItem title="19" tag="19" id="PkG-Pq-YIk" userLabel="19"/>
                             </items>
                         </menu>
                     </popUpButtonCell>
