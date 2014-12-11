@@ -16,6 +16,11 @@ typedef enum {
     NONE = -1,
 } Color;
 
+typedef struct {
+    int x;
+    int y;
+} Coord;
+
 @interface Player : NSObject
 //{
 //    NSString *name;

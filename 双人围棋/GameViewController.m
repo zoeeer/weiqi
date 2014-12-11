@@ -8,17 +8,28 @@
 
 #import "GameViewController.h"
 #import "Game.h"
+#import "Settings.h"
 
 @implementation BoardView
+
+- (Coord)convertCoordFromPoint:(NSPoint)aPoint
+{
+    Coord coord;
+    
+    coord.x = aPoint.x / [self frame].size.width * [self boardsize];
+    coord.y = aPoint.y / [self frame].size.height * [self boardsize] ;
+    return coord;
+}
 
 -(void)mouseDown:(NSEvent *)event
 {
     NSPoint clickLocation;
-    BOOL itemHit=NO;
+    Coord clickCoord;
     
     // convert the mouse-down location into the view coords
     clickLocation = [self convertPoint:[event locationInWindow]
                               fromView:nil];
+    clickCoord = [self convertCoordFromPoint:clickLocation];
 }
 
 @end
@@ -36,16 +47,23 @@
     //NSLog(@"viewDidLoad");
 }
 
-- (instancetype)initWithSettings:(Settings *)settings
+- (instancetype)initWithSettings:(Settings *)asettings
 {
     if (self = [super initWithNibName:@"Game" bundle:nil]) {
         // init board view according to board size
+        [self setSettings:asettings];
     }
     // Create game objects
-    game = [[Game alloc] initWithSettings:settings];
+    game = [[Game alloc] initWithSettings:asettings];
+    
     NSLog(@"game view controller initWithSettings");
 
     return self;
+}
+
+- (void)awakeFromNib
+{
+    [[self boardView] setBoardsize:[[self settings] board_size]];
 }
 
 @end
