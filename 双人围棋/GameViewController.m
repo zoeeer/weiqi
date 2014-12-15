@@ -10,6 +10,24 @@
 #import "Game.h"
 #import "Settings.h"
 
+@implementation StoneCell
+
+//- (NSView *) newStoneCell
+//{
+//    //StoneCell *cell = [[StoneCell alloc] initWithNibName:@"Cell" bundle:nil];
+//    StoneCell *cell = [[StoneCell alloc] initWithFrame:NSMakeRect(0, 0, <#CGFloat w#>, <#CGFloat h#>)];
+//}
+
+- (instancetype)initWithColor:(Color)color Index:(NSInteger)index Size:(CGFloat)size
+{
+    if (self = [super initWithFrame:NSMakeRect(0, 0, size, size)]) {
+        ;
+    }
+    return self;
+}
+
+@end
+
 @implementation BoardView
 
 - (Coord)convertCoordFromPoint:(NSPoint)aPoint
@@ -21,6 +39,15 @@
     return coord;
 }
 
+- (NSPoint)convertCoordToPoint:(Coord)aCoord
+{
+    NSPoint point;
+    
+    point.x = aCoord.x * [self frame].size.width / [self boardsize];
+    point.y = aCoord.y * [self frame].size.height / [self boardsize] ;
+    return point;
+}
+
 -(void)mouseDown:(NSEvent *)event
 {
     NSPoint clickLocation;
@@ -30,6 +57,13 @@
     clickLocation = [self convertPoint:[event locationInWindow]
                               fromView:nil];
     clickCoord = [self convertCoordFromPoint:clickLocation];
+}
+
+- (void)addStoneOfColor:(Color)color Coord:(Coord)coord
+{
+    StoneCell *cell = [[StoneCell alloc] initWithFrame:NSMakeRect(0, 0, [self cellsize], [self cellsize])];
+    [self addSubview:<#(NSView *)#>]
+    
 }
 
 @end
@@ -64,6 +98,8 @@
 - (void)awakeFromNib
 {
     [[self boardView] setBoardsize:[[self settings] board_size]];
+    [[self boardView] setCurrentColor:BLACK];
+    [[self boardView] setCellsize:40];
 }
 
 @end

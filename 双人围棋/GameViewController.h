@@ -16,20 +16,22 @@
 @property (weak) IBOutlet NSImageView *image;
 @property (weak) IBOutlet NSTextField *seqnum;
 
--(void)mouseDown:(NSEvent *)event;
 @end
 
 
 @interface BoardView : NSImageView
 
 @property NSInteger boardsize;
+@property Color currentColor;
+@property CGFloat cellsize;
+@property NSViewController *cellController;
 - (Coord)convertCoordFromPoint:(NSPoint)aPoint;
+- (NSPoint)convertCoordToPoint:(Coord)aCoord;
 
 @end
 
 @interface GameViewController : NSViewController
 {
-    BOOL isHumanGo;
     Game *game;
 }
 @property (weak) Settings *settings;
