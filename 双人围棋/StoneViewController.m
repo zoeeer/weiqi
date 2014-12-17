@@ -17,29 +17,36 @@
 
 @implementation StoneViewController
 
-- (instancetype)initWithColor:(Color)color Index:(NSInteger)index
+- (instancetype)initWithColor:(Color)color Index:(int)index
 {
     if (self = [super initWithNibName:@"Cell" bundle:nil]) {
-        
-        [[[self label] cell] setTitle:[NSString stringWithFormat:@"%ld", (long)index]];
-        
-        // choose stone image
-        switch (color) {
-            case BLACK:
-                [[self image] setImage:[[NSImage alloc] initByReferencingFile:@"black"]];
-                [[self label] setTextColor:[NSColor whiteColor]];
-                break;
-                
-            case WHITE:
-                [[self image] setImage:[[NSImage alloc] initByReferencingFile:@"white"]];
-                [[self label] setTextColor:[NSColor blackColor]];
-                break;
-                
-            default:
-                break;
-        };
+        [self setColor:color];
+        [self setIndex:index];
     }
     return self;
+}
+
+- (void)awakeFromNib
+{
+    //[[[self label] cell] setTitle:[NSString stringWithFormat:@"%ld", (long)[self index]]];
+    [[[self label] cell] setIntValue:[self index]];
+    
+    // choose stone image
+    switch ([self color]) {
+        case BLACK:
+            [[self image] setImage:[NSImage imageNamed:@"black"]];
+            [[self label] setTextColor:[NSColor whiteColor]];
+            break;
+            
+        case WHITE:
+            [[self image] setImage:[[NSImage alloc] initByReferencingFile:@"white"]];
+            [[self label] setTextColor:[NSColor blackColor]];
+            break;
+            
+        default:
+            break;
+    };
+    
 }
 
 - (void)viewDidLoad {

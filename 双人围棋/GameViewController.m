@@ -9,6 +9,7 @@
 #import "GameViewController.h"
 #import "Game.h"
 #import "Settings.h"
+#import "StoneViewController.h"
 
 @implementation StoneCell
 
@@ -91,7 +92,9 @@
 - (void)addStoneOfColor:(Color)color Coord:(Coord)coord
 {
     //StoneCell *cell = [[StoneCell alloc] initWithFrame:NSMakeRect(0, 0, [self cellsize], [self cellsize])];
-    StoneCell *cell = [[StoneCell alloc] initWithColor:BLACK Index:1 Size:[self cellsize]];
+    //StoneCell *cell = [[StoneCell alloc] initWithColor:BLACK Index:1 Size:[self cellsize]];
+    StoneViewController *stoneVC = [[StoneViewController alloc] initWithColor:BLACK Index:1];
+    NSView *cell = [stoneVC view];
     NSRect frame = [cell frame];
     NSPoint point = [self convertCoordToPoint:coord];
     frame.origin.x = point.x;

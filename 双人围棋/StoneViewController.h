@@ -13,5 +13,8 @@
 @property (weak) IBOutlet NSImageView *image;
 @property (weak) IBOutlet NSTextField *label;
 
-- (instancetype)initWithColor:(Color)color Index:(NSInteger)index;
+@property int index;
+@property Color color;
+
+- (instancetype)initWithColor:(Color)color Index:(int)index;
 @end
