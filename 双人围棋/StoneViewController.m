@@ -39,7 +39,7 @@
             break;
             
         case WHITE:
-            [[self image] setImage:[[NSImage alloc] initByReferencingFile:@"white"]];
+            [[self image] setImage:[NSImage imageNamed:@"white"]];
             [[self label] setTextColor:[NSColor blackColor]];
             break;
             
