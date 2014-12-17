@@ -12,9 +12,9 @@
 @class Game;
 @class Settings;
 
-@interface StoneCell : NSBox
-@property (weak) IBOutlet NSImageView *image;
-@property (weak) IBOutlet NSTextField *seqnum;
+@interface StoneCell : NSView
+//@property (weak) IBOutlet NSImageView *image;
+//@property (weak) IBOutlet NSTextField *seqnum;
 
 @end
 

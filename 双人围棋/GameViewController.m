@@ -21,7 +21,35 @@
 - (instancetype)initWithColor:(Color)color Index:(NSInteger)index Size:(CGFloat)size
 {
     if (self = [super initWithFrame:NSMakeRect(0, 0, size, size)]) {
-        ;
+        
+        // create the image view
+        NSImageView *image = [[NSImageView alloc] initWithFrame:[self bounds]];
+        
+        // create the index label
+        NSTextField *label = [[NSTextField alloc] initWithFrame:NSMakeRect(4, 10, 32, 20)];
+        [label setEditable:NO];
+        //[[label cell] setTitle:[NSString stringWithFormat:@"%ld", (long)index]];
+        [[label cell] setTitle:@"1"];
+        
+        // choose stone image
+        switch (color) {
+            case BLACK:
+                [image setCell:[[NSCell alloc] initImageCell:[[NSImage alloc] initByReferencingFile:@"black"]]];
+                [label setTextColor:[NSColor whiteColor]];
+                break;
+                
+            case WHITE:
+                [image setCell:[[NSCell alloc] initImageCell:[[NSImage alloc] initByReferencingFile:@"black"]]];
+                [label setTextColor:[NSColor whiteColor]];
+                [label setTextColor:[NSColor blackColor]];
+                break;
+                
+            default:
+                break;
+        };
+        
+        [self addSubview:image];
+        //[self addSubview:label];
     }
     return self;
 }
@@ -57,13 +85,20 @@
     clickLocation = [self convertPoint:[event locationInWindow]
                               fromView:nil];
     clickCoord = [self convertCoordFromPoint:clickLocation];
+    [self addStoneOfColor:[self currentColor] Coord:clickCoord];
 }
 
 - (void)addStoneOfColor:(Color)color Coord:(Coord)coord
 {
-    StoneCell *cell = [[StoneCell alloc] initWithFrame:NSMakeRect(0, 0, [self cellsize], [self cellsize])];
-    [self addSubview:<#(NSView *)#>]
-    
+    //StoneCell *cell = [[StoneCell alloc] initWithFrame:NSMakeRect(0, 0, [self cellsize], [self cellsize])];
+    StoneCell *cell = [[StoneCell alloc] initWithColor:BLACK Index:1 Size:[self cellsize]];
+    NSRect frame = [cell frame];
+    NSPoint point = [self convertCoordToPoint:coord];
+    frame.origin.x = point.x;
+    frame.origin.y = point.y;
+    [cell setFrame:frame];
+    [self addSubview:cell];
+    NSLog(nil);
 }
 
 @end
