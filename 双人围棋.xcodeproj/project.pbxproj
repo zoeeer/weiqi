@@ -108,9 +108,11 @@
 		26FE2F941A1B989E00A5C566 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				26D675911A35F4CC0057638D /* Cell.xib */,
 				26FE2F9D1A1B989F00A5C566 /* MainMenu.xib */,
 				262A8B361A2B766700E246F4 /* Startup.xib */,
 				26B35AA41A2DFC7C001E9569 /* Game.xib */,
+				26BBE6011A41C5B20013FF77 /* Stone.xib */,
 				262A8AE81A1F7B0500E246F4 /* 双人围棋.entitlements */,
 				26FE2F9B1A1B989F00A5C566 /* Images.xcassets */,
 				26FE2F951A1B989E00A5C566 /* Info.plist */,
@@ -221,7 +223,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26BBE6031A41C5B20013FF77 /* Stone.xib in Resources */,
 				26FE2F9C1A1B989F00A5C566 /* Images.xcassets in Resources */,
+				26D675921A35F4CC0057638D /* Cell.xib in Resources */,
 				26FE2F9F1A1B989F00A5C566 /* MainMenu.xib in Resources */,
 				262A8B381A2B766700E246F4 /* Startup.xib in Resources */,
 				26B35AA51A2DFC7C001E9569 /* Game.xib in Resources */,
@@ -242,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26BBE6021A41C5B20013FF77 /* StoneViewController.m in Sources */,
 				26FE2FB61A1B995D00A5C566 /* Board.m in Sources */,
 				26FE2F9A1A1B989E00A5C566 /* main.m in Sources */,
 				262A8AF01A21F16D00E246F4 /* Settings.m in Sources */,

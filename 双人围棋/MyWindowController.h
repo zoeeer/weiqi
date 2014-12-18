@@ -8,10 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "GameViewController.h"
-
 @class Board;
 @class Settings;
+@class Game;
+
+@class GameViewController;
 
 @interface MyWindowController : NSWindowController
 {

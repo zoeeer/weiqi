@@ -10,6 +10,7 @@
 #import "GameViewController.h"
 
 #import "Settings.h"
+#import "Game.h"
 
 @interface MyWindowController ()
 
@@ -38,19 +39,15 @@
     [startupView setFrame:[myTargetView bounds]];
     
     [self setSettings:[[Settings alloc] init]];
-    [self.settings setBoard_size:19];
     NSLog(@"Default board size is %ld", [self.settings board_size]);
 }
 
 - (IBAction)start:(id)sender {
-    NSLog(@"Board size is set to %ld", [self.settings board_size]);
-//    if (! self.settings) {
-//        NSLog(@"self.settings no longer exist!!");
-//    }
+    NSLog(@"Board size is %ld", [self.settings board_size]);
     
     // initialize game view from nib file
     [self willChangeValueForKey:@"gameViewController"];
-    gameViewController = [[GameViewController alloc] initWithNibName:@"Game" bundle:nil];
+    gameViewController = [[GameViewController alloc] initWithSettings:[self settings]];
     [self didChangeValueForKey:@"gameViewController"];
     
     NSLog(@"Initial window size is %f, %f", [self window].frame.size.height, [self window].frame.size.width);
@@ -73,6 +70,8 @@
 
     [myTargetView addSubview:[gameViewController view]];
     [[gameViewController view]  setFrame:[myTargetView bounds]];
+    
+    
 }
 
 - (IBAction)setBoardSize:(id)sender {
