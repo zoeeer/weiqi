@@ -15,10 +15,14 @@
     NSLog(@"settings will dealloc");
 }
 
-- (instancetype)init
+- (instancetype)initWithSize:(NSInteger)size Mode:(NSInteger)mode
+                    Handicap:(NSInteger)han Komi:(NSInteger) komi
 {
     if (self = [super init]) {
-        [self setBoard_size:9];
+        [self setBoard_size:size];
+        [self setMode:mode];
+        [self setHandicap:han];
+        [self setKomi:komi];
     }
     return self;
 }
