@@ -7,7 +7,7 @@
 //
 
 #import "MyWindowController.h"
-#import "GameViewController.h"
+#import "GameController.h"
 
 #import "Settings.h"
 #import "Game.h"
@@ -46,20 +46,20 @@
     NSLog(@"Board size is %ld", [self.settings board_size]);
     
     // initialize game view from nib file
-    [self willChangeValueForKey:@"gameViewController"];
-    gameViewController = [[GameViewController alloc] initWithSettings:[self settings]];
-    [self didChangeValueForKey:@"gameViewController"];
+    [self willChangeValueForKey:@"gameController"];
+    gameController = [[GameController alloc] initWithSettings:[self settings]];
+    [self didChangeValueForKey:@"gameController"];
     
     NSLog(@"Initial window size is %f, %f", [self window].frame.size.height, [self window].frame.size.width);
     NSLog(@"Initial window origin is %f, %f", [self window].frame.origin.x, [self window].frame.origin.y);
-    NSLog(@"gameView size is %f, %f", [gameViewController view].frame.size.height, [gameViewController view].frame.size.width);
+    NSLog(@"gameView size is %f, %f", [gameController view].frame.size.height, [gameController view].frame.size.width);
     
     // Switch startup view to game view
 //    [myTargetView replaceSubview:startupView with:[gameViewController view]];
     [startupView removeFromSuperview];
     NSRect frame = [[self window] frame];
     NSSize contentSize = myTargetView.frame.size;
-    NSSize targetSize = [gameViewController view].frame.size;
+    NSSize targetSize = [gameController view].frame.size;
     // For simplicity in early version, only show the board
     frame.size.width += targetSize.height - contentSize.width;
     frame.size.height += targetSize.height - contentSize.height;
@@ -68,8 +68,8 @@
     [[self window] setFrame:frame display:YES animate:YES];
    // [[self window] setContentSize:[gameViewController view].frame.size];
 
-    [myTargetView addSubview:[gameViewController view]];
-    [[gameViewController view]  setFrame:[myTargetView bounds]];
+    [myTargetView addSubview:[gameController view]];
+    [[gameController view]  setFrame:[myTargetView bounds]];
     
     
 }

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Rang. All rights reserved.
 //
 
-#import "GameViewController.h"
+#import "GameController.h"
 #import "Game.h"
 #import "Settings.h"
 #import "StoneViewController.h"
@@ -106,11 +106,11 @@
 
 @end
 
-@interface GameViewController ()
+@interface GameController ()
 
 @end
 
-@implementation GameViewController
+@implementation GameController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -125,8 +125,15 @@
         // init board view according to board size
         [self setSettings:asettings];
     }
-    // Create game objects
-    game = [[Game alloc] initWithSettings:asettings];
+    // Init Game Properties
+    [self setBoardsize:[asettings board_size]];
+    
+    [self setPlayer1:[[Player alloc] init]];
+    [self setPlayer2:[[Player alloc] init]];
+    [[self player1] setColor:BLACK];
+    [[self player2] setColor:WHITE];
+    [[self player1] setNext:[self player2]];
+    [[self player1] setNext:[self player1]];
     
     NSLog(@"game view controller initWithSettings");
 
@@ -135,9 +142,9 @@
 
 - (void)awakeFromNib
 {
-    [[self boardView] setBoardsize:[[self settings] board_size]];
-    [[self boardView] setCurrentColor:BLACK];
-    [[self boardView] setCellsize:40];
+    [[self board] setBoardsize:[[self settings] board_size]];
+    [[self board] setCurrentColor:BLACK];
+    [[self board] setCellsize:40];
 }
 
 @end

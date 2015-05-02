@@ -30,12 +30,16 @@
 
 @end
 
-@interface GameViewController : NSViewController
-{
-    Game *game;
-}
+/**********************************************
+ ****            GameController            ****
+ **********************************************/
+@interface GameController : NSViewController
+@property NSInteger boardsize;
+@property (strong) Player *player1;
+@property (strong) Player *player2;
+@property (weak) Player *currentplayer;
 @property (weak) Settings *settings;
-@property (weak) IBOutlet BoardView *boardView;
+@property (weak) IBOutlet BoardView *board;
 
 - (instancetype)initWithSettings:(Settings *)settings;
 

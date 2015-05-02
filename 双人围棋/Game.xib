@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="GameViewController">
+        <customObject id="-2" userLabel="File's Owner" customClass="GameController">
             <connections>
                 <outlet property="boardView" destination="6sh-Ca-K1K" id="b2f-Cc-BK2"/>
                 <outlet property="view" destination="c22-O7-iKe" id="8jh-1N-ZL6"/>

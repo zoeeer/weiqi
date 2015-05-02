@@ -12,12 +12,12 @@
 @class Settings;
 @class Game;
 
-@class GameViewController;
+@class GameController;
 
 @interface MyWindowController : NSWindowController
 {
     //    NSViewController *startupView;
-    GameViewController *gameViewController;
+    GameController *gameController;
     __weak IBOutlet NSView *startupView;
     __weak IBOutlet NSView	*myTargetView;
 }
