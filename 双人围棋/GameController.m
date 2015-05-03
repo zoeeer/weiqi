@@ -13,12 +13,6 @@
 
 @implementation StoneCell
 
-//- (NSView *) newStoneCell
-//{
-//    //StoneCell *cell = [[StoneCell alloc] initWithNibName:@"Cell" bundle:nil];
-//    StoneCell *cell = [[StoneCell alloc] initWithFrame:NSMakeRect(0, 0, <#CGFloat w#>, <#CGFloat h#>)];
-//}
-
 - (instancetype)initWithColor:(Color)color Index:(NSInteger)index Size:(CGFloat)size
 {
     if (self = [super initWithFrame:NSMakeRect(0, 0, size, size)]) {
@@ -79,6 +73,9 @@
 
 -(void)mouseDown:(NSEvent *)event
 {
+    if (![self allowClick]) {
+        return;
+    }
     NSPoint clickLocation;
     Coord clickCoord;
     
@@ -86,13 +83,12 @@
     clickLocation = [self convertPoint:[event locationInWindow]
                               fromView:nil];
     clickCoord = [self convertCoordFromPoint:clickLocation];
-    [self addStoneOfColor:[self currentColor] Coord:clickCoord];
+    [[self gameDelegate] boardClickedAt:clickCoord];
+//    [self addStoneOfColor:[self currentColor] Coord:clickCoord];
 }
 
 - (void)addStoneOfColor:(Color)color Coord:(Coord)coord
 {
-    //StoneCell *cell = [[StoneCell alloc] initWithFrame:NSMakeRect(0, 0, [self cellsize], [self cellsize])];
-    //StoneCell *cell = [[StoneCell alloc] initWithColor:BLACK Index:1 Size:[self cellsize]];
     StoneViewController *stoneVC = [[StoneViewController alloc] initWithColor:BLACK Index:1];
     NSView *cell = [stoneVC view];
     NSRect frame = [cell frame];
@@ -101,7 +97,18 @@
     frame.origin.y = point.y;
     [cell setFrame:frame];
     [self addSubview:cell];
-    NSLog(nil);
+}
+
+- (void)addStoneOfColor:(Color)color Coord:(Coord)coord Index:(NSInteger)index
+{
+    StoneViewController *stoneVC = [[StoneViewController alloc] initWithColor:color Index:index];
+    NSView *cell = [stoneVC view];
+    NSRect frame = [cell frame];
+    NSPoint point = [self convertCoordToPoint:coord];
+    frame.origin.x = point.x;
+    frame.origin.y = point.y;
+    [cell setFrame:frame];
+    [self addSubview:cell];
 }
 
 @end
@@ -133,7 +140,11 @@
     [[self player1] setColor:BLACK];
     [[self player2] setColor:WHITE];
     [[self player1] setNext:[self player2]];
-    [[self player1] setNext:[self player1]];
+    [[self player2] setNext:[self player1]];
+    [self setCurrentplayer: [self player1]];
+    
+    [self setMoveCount: 0];
+    [self setGameState: INIT];
     
     NSLog(@"game view controller initWithSettings");
 
@@ -143,8 +154,32 @@
 - (void)awakeFromNib
 {
     [[self board] setBoardsize:[[self settings] board_size]];
-    [[self board] setCurrentColor:BLACK];
+    //[[self board] setCurrentColor:BLACK];
     [[self board] setCellsize:40];
+    [[self board] setAllowClick: false];
+    [[self board] setGameDelegate: self];
 }
 
+- (void)run
+{
+    if ([[self currentplayer] move] == WAIT_INPUT) {
+        [[self board] setAllowClick: true];
+    }
+}
+
+- (BOOL)isValidMove:(Coord)aCoord
+{
+    return true;
+}
+
+- (void)boardClickedAt:(Coord)aCoord
+{
+    if ([self isValidMove:aCoord]) {
+        ++self.moveCount;
+        [[self board] addStoneOfColor:[[self currentplayer] color] Coord:aCoord Index:[self moveCount]];
+        [self setCurrentplayer:[[self currentplayer] next]];
+        [[self board] setAllowClick: false];
+        [self run];
+    }
+}
 @end

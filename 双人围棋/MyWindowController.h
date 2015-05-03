@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@class GameController;
 
 @class Board;
 @class Settings;
@@ -22,6 +23,7 @@
     __weak IBOutlet NSView	*myTargetView;
 }
 
+//@property GameController *gameController;
 @property (strong, nonatomic) Settings* settings;
 
 - (IBAction)start:(id)sender;

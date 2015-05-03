@@ -16,5 +16,5 @@
 @property int index;
 @property Color color;
 
-- (instancetype)initWithColor:(Color)color Index:(int)index;
+- (instancetype)initWithColor:(Color)color Index:(NSInteger)index;
 @end

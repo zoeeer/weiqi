@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "Game.h"
 
-@class Game;
+@class Player;
 @class Settings;
 
 @interface StoneCell : NSView
@@ -25,6 +25,8 @@
 @property Color currentColor;
 @property CGFloat cellsize;
 @property NSViewController *cellController;
+@property BOOL allowClick;
+@property id gameDelegate;
 - (Coord)convertCoordFromPoint:(NSPoint)aPoint;
 - (NSPoint)convertCoordToPoint:(Coord)aCoord;
 
@@ -34,13 +36,21 @@
  ****            GameController            ****
  **********************************************/
 @interface GameController : NSViewController
+
 @property NSInteger boardsize;
 @property (strong) Player *player1;
 @property (strong) Player *player2;
 @property (weak) Player *currentplayer;
 @property (weak) Settings *settings;
 @property (weak) IBOutlet BoardView *board;
+@property GameState gameState;
+@property NSInteger moveCount;
 
 - (instancetype)initWithSettings:(Settings *)settings;
+- (void)run;
+
+- (BOOL)isValidMove:(Coord)aCoord;
+
+- (void)boardClickedAt:(Coord)aCoord;
 
 @end

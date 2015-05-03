@@ -21,26 +21,30 @@ typedef struct {
     int y;
 } Coord;
 
+typedef enum {
+    INIT,
+    WAIT_INPUT,
+} GameState;
+
+/**********************************************
+ ****                Player                ****
+ **********************************************/
+
 @interface Player : NSObject
-//{
-//    NSString *name;
-//    Color color;
-//    Player *next;
-//}
+
 @property (strong) NSString *name;
 @property Color color;
 @property (weak) Player *next;
 
+- (instancetype)initWithColor:(Color)color;
+- (GameState) move;
 @end
 
+/**********************************************
+ ****          Game (deprecated)           ****
+ **********************************************/
+
 @interface Game : NSObject
-//{
-//    NSInteger handicap;
-//    NSInteger komi;
-//    Player *player1;
-//    Player *player2;
-//    Player *currentplayer;
-//}
 
 @property NSInteger boardsize;
 @property NSInteger handicap;

@@ -19,6 +19,18 @@
     return self;
 }
 
+- (instancetype)initWithColor:(Color)color
+{
+    if (self = [super init]) {
+        [self setColor:color];
+    }
+    return self;
+}
+
+- (GameState)move
+{
+    return WAIT_INPUT;
+}
 @end
 
 @implementation Game
