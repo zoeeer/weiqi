@@ -59,8 +59,8 @@
 
 - (BOOL)isValidCoord:(Coord)aCoord;
 - (BOOL)isValidMove:(Coord)aCoord;
-- (NSArray *)handleCaptureAt:(Coord)aCoord;
-- (NSArray *)handleCaptureAround:(Coord)aCoord;
+- (NSArray *)getCapturedAt:(Coord)aCoord;
+- (NSArray *)getCapturedAround:(Coord)aCoord;
 - (BOOL)isCaptured:(Coord)coord;
 - (void) removeStones:(NSArray*)stoneArray;
 

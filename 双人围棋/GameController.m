@@ -196,7 +196,7 @@
     return true;
 }
 
-- (NSArray *)handleCaptureAt:(Coord)aCoord
+- (NSArray *)getCapturedAt:(Coord)aCoord
 {
     /* using BFS to scan this area */
     int visited[boardsize][boardsize];
@@ -255,38 +255,42 @@
 
 - (BOOL)isCaptured:(Coord)coord
 {
-    if ([[self handleCaptureAt:coord] count] > 0) {
+    if ([[self getCapturedAt:coord] count] > 0) {
         return true;
     }
     return false;
 }
 
-- (NSArray *)handleCaptureAround:(Coord)aCoord
+- (NSArray *)getCapturedAround:(Coord)aCoord
 {
     int x = aCoord.x;
     int y = aCoord.y;
+    Color oppoColor = -boardstate[x][y].color;
     NSMutableArray *capturedArray = [[NSMutableArray alloc] init];
     // left
-    if (x > 0) {
-        [capturedArray addObjectsFromArray: [self handleCaptureAt:(Coord) {x-1, y}]];
+    if (x > 0 && [boardstate[x-1][y] color] == oppoColor) {
+        [capturedArray addObjectsFromArray: [self getCapturedAt:(Coord) {x-1, y}]];
     }
     // right
-    if (x < boardsize-1) {
-        [capturedArray addObjectsFromArray: [self handleCaptureAt:(Coord) {x+1, y}]];
+    if (x < boardsize-1 && [boardstate[x+1][y] color] == oppoColor) {
+        [capturedArray addObjectsFromArray: [self getCapturedAt:(Coord) {x+1, y}]];
     }
     // above
-    if (y > 0) {
-        [capturedArray addObjectsFromArray: [self handleCaptureAt:(Coord) {x, y-1}]];
+    if (y > 0 && [boardstate[x][y-1] color] == oppoColor) {
+        [capturedArray addObjectsFromArray: [self getCapturedAt:(Coord) {x, y-1}]];
     }
     // below
-    if (y < boardsize-1) {
-        [capturedArray addObjectsFromArray: [self handleCaptureAt:(Coord) {x, y+1}]];
+    if (y < boardsize-1 && [boardstate[x][y+1] color] == oppoColor) {
+        [capturedArray addObjectsFromArray: [self getCapturedAt:(Coord) {x, y+1}]];
     }
     
-    if (capturedArray != nil) {
-        [self removeStones:capturedArray];
+    if ([capturedArray count] > 0) {
+        //[self removeStones:capturedArray];
+        return capturedArray;
     }
-    return capturedArray;
+    else {
+        return nil;
+    }
 }
 
 - (void) removeStones:(NSArray*)stoneArray {
@@ -304,14 +308,15 @@
         //boardstate[aCoord.x][aCoord.y] = [[self currentplayer] color];
         StoneViewController *newStone = [[self board] addStoneOfColor:[[self currentplayer] color] Coord:aCoord Index:[self moveCount]];
         boardstate[aCoord.x][aCoord.y] = newStone;
-        if ([self isCaptured:aCoord]) {
+        NSArray *capturedStones = [self getCapturedAround:aCoord];
+        if (capturedStones == nil && [self isCaptured:aCoord]) {
             boardstate[aCoord.x][aCoord.y] = nil;
             --self.moveCount;
             return;
         }
         [[newStone view] setHidden:NO];
+        [self removeStones:capturedStones];
         [[self moveHistory] addObject:newStone];
-        [self handleCaptureAround:aCoord];
         [self setCurrentplayer:[[self currentplayer] next]];
         [[self board] setAllowClick: false];
         [self run];
