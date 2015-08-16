@@ -58,7 +58,7 @@
 - (void)run;
 
 - (BOOL)isValidCoord:(Coord)aCoord;
-- (BOOL)isValidMove:(Coord)aCoord;
+- (BOOL)isOccupied:(Coord)aCoord;
 - (NSArray *)getCapturedAt:(Coord)aCoord;
 - (NSArray *)getCapturedAround:(Coord)aCoord;
 - (BOOL)isCaptured:(Coord)coord;

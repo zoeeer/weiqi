@@ -183,17 +183,13 @@
     return true;
 }
 
-- (BOOL)isValidMove:(Coord)aCoord
+- (BOOL)isOccupied:(Coord)aCoord
 {
     // return Invalid if position already occupied
     if (boardstate[aCoord.x][aCoord.y] != nil) {
-        return false;
+        return true;
     }
-    // return Invalid if it's a suicide move
-/*    else if ([[self handleCaptureAt:aCoord] count] > 0) {
-        return false;
-    }*/
-    return true;
+    return false;
 }
 
 - (NSArray *)getCapturedAt:(Coord)aCoord
@@ -255,7 +251,7 @@
 
 - (BOOL)isCaptured:(Coord)coord
 {
-    if ([[self getCapturedAt:coord] count] > 0) {
+    if ([self getCapturedAt:coord] != nil) {
         return true;
     }
     return false;
@@ -285,7 +281,6 @@
     }
     
     if ([capturedArray count] > 0) {
-        //[self removeStones:capturedArray];
         return capturedArray;
     }
     else {
@@ -303,7 +298,7 @@
 - (void)boardClickedAt:(Coord)aCoord
 {
     NSLog(@"Clicked: x = %d, y = %d", aCoord.x, aCoord.y);
-    if ([self isValidMove:aCoord]) {
+    if (! [self isOccupied:aCoord]) {
         ++self.moveCount;
         //boardstate[aCoord.x][aCoord.y] = [[self currentplayer] color];
         StoneViewController *newStone = [[self board] addStoneOfColor:[[self currentplayer] color] Coord:aCoord Index:[self moveCount]];
