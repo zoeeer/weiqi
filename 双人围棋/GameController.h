@@ -11,6 +11,7 @@
 
 @class Player;
 @class Settings;
+@class StoneViewController;
 
 @interface StoneCell : NSView
 //@property (weak) IBOutlet NSImageView *image;
@@ -19,10 +20,12 @@
 @end
 
 
+/**********************************************
+ ****              BoardView               ****
+ **********************************************/
 @interface BoardView : NSImageView
 
 @property NSInteger boardsize;
-@property Color currentColor;
 @property CGFloat cellsize;
 @property NSViewController *cellController;
 @property BOOL allowClick;
@@ -36,20 +39,30 @@
  ****            GameController            ****
  **********************************************/
 @interface GameController : NSViewController
-
-@property NSInteger boardsize;
+{
+    NSInteger boardsize;
+    //Color boardstate[19][19];
+    StoneViewController *boardstate[19][19];
+}
 @property (strong) Player *player1;
 @property (strong) Player *player2;
 @property (weak) Player *currentplayer;
 @property (weak) Settings *settings;
 @property (weak) IBOutlet BoardView *board;
 @property GameState gameState;
-@property NSInteger moveCount;
+@property (strong) NSMutableArray *moveHistory;
+@property int moveCount;
+//@property NSMutableArray history;
 
 - (instancetype)initWithSettings:(Settings *)settings;
 - (void)run;
 
+- (BOOL)isValidCoord:(Coord)aCoord;
 - (BOOL)isValidMove:(Coord)aCoord;
+- (NSArray *)handleCaptureAt:(Coord)aCoord;
+- (NSArray *)handleCaptureAround:(Coord)aCoord;
+- (BOOL)isCaptured:(Coord)coord;
+- (void) removeStones:(NSArray*)stoneArray;
 
 - (void)boardClickedAt:(Coord)aCoord;
 

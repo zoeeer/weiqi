@@ -17,11 +17,13 @@
 
 @implementation StoneViewController
 
-- (instancetype)initWithColor:(Color)color Index:(int)index
+- (instancetype)initWithColor:(Color)color Index:(int)index Coord:(Coord) acoord
 {
     if (self = [super initWithNibName:@"Cell" bundle:nil]) {
         [self setColor:color];
         [self setIndex:index];
+        [self setCoord:acoord];
+        [[self view] setHidden:YES];
     }
     return self;
 }

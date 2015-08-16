@@ -11,9 +11,9 @@
 @class Settings;
 
 typedef enum {
-    BLACK,
-    WHITE,
-    NONE = -1,
+    BLACK = 1,
+    WHITE = -1,
+    NONE = 0,
 } Color;
 
 typedef struct {
