@@ -9,6 +9,29 @@
 #import "Game.h"
 #import "Settings.h"
 
+/**********************************************
+ ****                Record                ****
+ **********************************************/
+@interface Record ()
+@property (readwrite) StoneViewController *stoneVC;
+@property (readwrite) NSArray *captured;
+@end
+
+@implementation Record
+
+- (instancetype)initWithCurrentMove:(StoneViewController*)stonevc CapturedArray:(NSArray*)capturedArray
+{
+    if (self = [super init]) {
+        [self setStoneVC:stonevc];
+        [self setCaptured:capturedArray];
+    }
+    return self;
+}
+@end
+/**********************************************
+ ****                Player                ****
+ **********************************************/
+
 @implementation Player
 
 - (instancetype)init

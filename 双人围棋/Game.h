@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class Settings;
+@class StoneViewController;
 
 typedef enum {
     BLACK = 1,
@@ -25,6 +26,16 @@ typedef enum {
     INIT,
     WAIT_INPUT,
 } GameState;
+
+/**********************************************
+ ****                Record                ****
+ **********************************************/
+@interface Record : NSObject
+
+@property (readonly) StoneViewController *stoneVC;
+@property (readonly) NSArray *captured;
+- (instancetype)initWithCurrentMove:(StoneViewController*)stonevc CapturedArray:(NSArray*)capturedArray;
+@end
 
 /**********************************************
  ****                Player                ****

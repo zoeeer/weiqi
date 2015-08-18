@@ -305,13 +305,16 @@
         boardstate[aCoord.x][aCoord.y] = newStone;
         NSArray *capturedStones = [self getCapturedAround:aCoord];
         if (capturedStones == nil && [self isCaptured:aCoord]) {
+            // suicide move is invalid
             boardstate[aCoord.x][aCoord.y] = nil;
             --self.moveCount;
             return;
         }
+        // do the following for a valid move
         [[newStone view] setHidden:NO];
+        Record *newRec = [[Record alloc] initWithCurrentMove:newStone CapturedArray:capturedStones];
         [self removeStones:capturedStones];
-        [[self moveHistory] addObject:newStone];
+        [[self moveHistory] addObject:newRec];
         [self setCurrentplayer:[[self currentplayer] next]];
         [[self board] setAllowClick: false];
         [self run];

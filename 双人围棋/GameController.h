@@ -12,6 +12,7 @@
 @class Player;
 @class Settings;
 @class StoneViewController;
+@class Record;
 
 @interface StoneCell : NSView
 //@property (weak) IBOutlet NSImageView *image;
