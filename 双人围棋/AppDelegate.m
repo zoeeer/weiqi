@@ -20,14 +20,6 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
 
-    // Load Preferences
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    NSInteger boardsize = [defaults integerForKey:@"Default Board Size"];
-//    if (boardsize == 0) boardsize = 9;
-//    NSInteger mode = [defaults integerForKey:@"Default Mode"];
-//    NSInteger handicap = [defaults integerForKey:@"Default Handicap"];
-//    CGFloat komi = [defaults floatForKey:@"Default Compensation"];
-
     //[self.window setDocumentEdited:YES];
 
 }

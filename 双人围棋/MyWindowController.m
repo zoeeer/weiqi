@@ -40,6 +40,17 @@
     [startupView setFrame:[myTargetView bounds]];
     
     [self setSettings:[[Settings alloc] init]];
+    // Load Preferences
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [[self settings] setBoard_size:[defaults integerForKey:Key_BoardSize]];
+    if ([[self settings] board_size] == 0) [[self settings] setBoard_size:9];
+    //NSInteger mode = [defaults integerForKey:@"Default Mode"];
+    //NSInteger handicap = [defaults integerForKey:@"Default Handicap"];
+    //CGFloat komi = [defaults floatForKey:@"Default Compensation"];
+    if ([defaults objectForKey:Key_ShowHistory] != nil) {
+        [[self settings] setShowHistory:[defaults boolForKey:Key_ShowHistory]];
+    }
+    
     NSLog(@"Default board size is %ld", [self.settings board_size]);
 }
 
@@ -84,6 +95,21 @@
     //NSLog(@"item tag: %ld", [item tag]);
     [self.settings setBoard_size:[item tag]];
     NSLog(@"Board size is set to %ld", [self.settings board_size]);
+}
+
+- (IBAction)toggleShowHistory:(id)sender
+{
+    NSLog(@"ShowHistory before toggle: %d", [self.settings showHistory]);
+    BOOL newVal = [self.settings showHistory] ? false : true;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (newVal) {
+        [defaults setBool:YES forKey:Key_ShowHistory];
+    }
+    else {
+        //[defaults setBool:NO forKey:Key_ShowHistory];
+        [defaults removeObjectForKey:Key_ShowHistory];
+    }
+    [gameController toggleShowHistory:newVal];
 }
 
 @end
