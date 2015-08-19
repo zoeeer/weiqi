@@ -19,9 +19,10 @@
 }
 
 //@property GameController *gameController;
-@property (strong, nonatomic) Settings* settings;
+@property (strong) Settings* settings;
 
 - (IBAction)start:(id)sender;
 - (IBAction)setBoardSize:(id)sender;
 
+- (IBAction)toggleShowHistory:(id)sender;
 @end

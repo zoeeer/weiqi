@@ -58,6 +58,7 @@
 - (instancetype)initWithSettings:(Settings *)settings;
 - (void)run;
 
+// Game Judgements
 - (BOOL)isValidCoord:(Coord)aCoord;
 - (BOOL)isOccupied:(Coord)aCoord;
 - (NSArray *)getCapturedAt:(Coord)aCoord;
@@ -67,4 +68,5 @@
 
 - (void)boardClickedAt:(Coord)aCoord;
 
+- (void)toggleShowHistory:(BOOL)showHistory;
 @end

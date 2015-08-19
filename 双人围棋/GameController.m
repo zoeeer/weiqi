@@ -164,32 +164,32 @@
     [[self board] setBoardsize:[[self settings] board_size]];
     //[[self board] setCurrentColor:BLACK];
     [[self board] setCellsize:40];
-    [[self board] setAllowClick: false];
+    [[self board] setAllowClick: NO];
     [[self board] setGameDelegate: self];
 }
 
 - (void)run
 {
     if ([[self currentplayer] move] == WAIT_INPUT) {
-        [[self board] setAllowClick: true];
+        [[self board] setAllowClick: YES];
     }
 }
 
 - (BOOL)isValidCoord:(Coord)aCoord
 {
     if (aCoord.x < 0 || aCoord.x >= boardsize || aCoord.y < 0 || aCoord.y >= boardsize) {
-        return false;
+        return NO;
     }
-    return true;
+    return YES;
 }
 
 - (BOOL)isOccupied:(Coord)aCoord
 {
     // return Invalid if position already occupied
     if (boardstate[aCoord.x][aCoord.y] != nil) {
-        return true;
+        return YES;
     }
-    return false;
+    return NO;
 }
 
 - (NSArray *)getCapturedAt:(Coord)aCoord
@@ -252,9 +252,9 @@
 - (BOOL)isCaptured:(Coord)coord
 {
     if ([self getCapturedAt:coord] != nil) {
-        return true;
+        return YES;
     }
-    return false;
+    return NO;
 }
 
 - (NSArray *)getCapturedAround:(Coord)aCoord
@@ -316,8 +316,16 @@
         [self removeStones:capturedStones];
         [[self moveHistory] addObject:newRec];
         [self setCurrentplayer:[[self currentplayer] next]];
-        [[self board] setAllowClick: false];
+        [[self board] setAllowClick: NO];
         [self run];
+    }
+}
+
+- (void)toggleShowHistory:(BOOL)showHistory
+{
+    for (id move in [self moveHistory]) {
+        StoneViewController *stone = [move stoneVC];
+        [[stone label] setHidden:!showHistory];
     }
 }
 @end

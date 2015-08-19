@@ -7,6 +7,7 @@
 //
 
 #import "StoneViewController.h"
+#import "Settings.h"
 
 //static NSImage *blackImg;
 //static NSImage *whiteImg;
@@ -30,9 +31,11 @@
 
 - (void)awakeFromNib
 {
-    //[[[self label] cell] setTitle:[NSString stringWithFormat:@"%ld", (long)[self index]]];
     [[[self label] cell] setIntValue:[self index]];
-    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL showIndex = [defaults boolForKey:Key_ShowHistory];
+    [[self label] setHidden:!showIndex];
+
     // choose stone image
     switch ([self color]) {
         case BLACK:
