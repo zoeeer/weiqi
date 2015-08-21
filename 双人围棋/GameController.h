@@ -8,33 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Game.h"
+#import "BoardView.h"
 
 @class Player;
 @class Settings;
 @class StoneViewController;
 @class Record;
-
-@interface StoneCell : NSView
-//@property (weak) IBOutlet NSImageView *image;
-//@property (weak) IBOutlet NSTextField *seqnum;
-
-@end
-
-
-/**********************************************
- ****              BoardView               ****
- **********************************************/
-@interface BoardView : NSImageView
-
-@property NSInteger boardsize;
-@property CGFloat cellsize;
-@property NSViewController *cellController;
-@property BOOL allowClick;
-@property id gameDelegate;
-- (Coord)convertCoordFromPoint:(NSPoint)aPoint;
-- (NSPoint)convertCoordToPoint:(Coord)aCoord;
-
-@end
 
 /**********************************************
  ****            GameController            ****

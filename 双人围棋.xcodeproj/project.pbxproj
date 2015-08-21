@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260636511B876C7400A54D6B /* BoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 260636501B876C7400A54D6B /* BoardView.m */; };
 		262A8AED1A21EFE400E246F4 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 262A8AEC1A21EFE400E246F4 /* Game.m */; };
 		262A8AF01A21F16D00E246F4 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 262A8AEF1A21F16D00E246F4 /* Settings.m */; };
 		262A8B251A2B62B600E246F4 /* MyWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262A8B241A2B62B600E246F4 /* MyWindowController.m */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		260636501B876C7400A54D6B /* BoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardView.m; sourceTree = "<group>"; };
+		260636521B876C9B00A54D6B /* BoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoardView.h; sourceTree = "<group>"; };
 		262A8AE81A1F7B0500E246F4 /* 双人围棋.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "双人围棋.entitlements"; sourceTree = "<group>"; };
 		262A8AE91A1F7C3700E246F4 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/MainMenu.strings"; sourceTree = "<group>"; };
 		262A8AEA1A1F7C4400E246F4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
@@ -106,13 +109,13 @@
 				26FE2F971A1B989E00A5C566 /* AppDelegate.m */,
 				262A8B231A2B62B600E246F4 /* MyWindowController.h */,
 				262A8B241A2B62B600E246F4 /* MyWindowController.m */,
+				260636521B876C9B00A54D6B /* BoardView.h */,
+				260636501B876C7400A54D6B /* BoardView.m */,
 				262A8B341A2B766700E246F4 /* GameController.h */,
 				262A8B351A2B766700E246F4 /* GameController.m */,
 				26BBE5FF1A41C5B20013FF77 /* StoneViewController.h */,
 				26BBE6001A41C5B20013FF77 /* StoneViewController.m */,
 				262A8AEB1A21EFE400E246F4 /* Game.h */,
-				262A8AEE1A21F16D00E246F4 /* Settings.h */,
-				262A8AEF1A21F16D00E246F4 /* Settings.m */,
 				262A8AEC1A21EFE400E246F4 /* Game.m */,
 				262A8AEE1A21F16D00E246F4 /* Settings.h */,
 				262A8AEF1A21F16D00E246F4 /* Settings.m */,
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26BBE6021A41C5B20013FF77 /* StoneViewController.m in Sources */,
+				260636511B876C7400A54D6B /* BoardView.m in Sources */,
 				26FE2F9A1A1B989E00A5C566 /* main.m in Sources */,
 				262A8AF01A21F16D00E246F4 /* Settings.m in Sources */,
 				26FE2F981A1B989E00A5C566 /* AppDelegate.m in Sources */,
