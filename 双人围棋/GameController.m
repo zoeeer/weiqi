@@ -193,6 +193,13 @@
     }
 }
 
+- (void) addStones:(NSArray*)stoneArray {
+    for (id stone in stoneArray) {
+        boardstate[[stone coord].x][[stone coord].y] = stone;
+        [[self board] addSubview:[stone view]];
+    }
+}
+
 - (void)boardClickedAt:(Coord)aCoord
 {
     NSLog(@"Clicked: x = %d, y = %d", aCoord.x, aCoord.y);
@@ -233,6 +240,10 @@
     Record *lastRec = [[self moveHistory] lastObject];
     if (lastRec == nil) return countTakeBack;
     NSLog(@"The move to be taken back is: %d", [[lastRec stoneVC] index]);
+    
+    // restore captured stones, if any
+    [self addStones:[lastRec captured]];
+    
     StoneViewController *stone = [lastRec stoneVC];
     // remove from board view
     [[stone view] removeFromSuperview];
