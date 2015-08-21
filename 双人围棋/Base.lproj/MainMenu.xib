@@ -134,7 +134,7 @@
                         <items>
                             <menuItem title="Take Back Move" keyEquivalent="z" id="dRJ-4n-Yzg">
                                 <connections>
-                                    <action selector="undo:" target="-1" id="M6e-cu-g7V"/>
+                                    <action selector="takeBackMove:" target="cz6-9m-4Gw" id="jMx-ba-weW"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Show History" state="on" keyEquivalent="v" id="WeT-3V-zwk">

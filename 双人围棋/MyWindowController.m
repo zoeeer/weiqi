@@ -112,4 +112,18 @@
     [gameController toggleShowHistory:newVal];
 }
 
+- (IBAction)takeBackMove:(id)sender
+{
+    if ([[gameController settings] mode] == ManToMan) {
+        // If it's a local Man-Man game, take back only one move a time.
+        Player * player = [[gameController currentplayer] next];
+        if ([gameController takeBackMoveFor:player] == 1) {
+            // change current player on success
+            [gameController setCurrentplayer:player];
+        }
+    }
+    else {
+        [gameController takeBackMoveFor:[gameController currentplayer]];
+    }
+}
 @end

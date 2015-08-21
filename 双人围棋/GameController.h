@@ -48,4 +48,5 @@
 - (void)boardClickedAt:(Coord)aCoord;
 
 - (void)toggleShowHistory:(BOOL)showHistory;
+- (int)takeBackMoveFor:(Player*)player;
 @end

@@ -23,7 +23,7 @@
     return self;
 }
 
-- (instancetype)initWithSize:(NSInteger)size Mode:(NSInteger)mode
+- (instancetype)initWithSize:(NSInteger)size Mode:(GameMode)mode
                     Handicap:(NSInteger)han Komi:(NSInteger) komi
 {
     if (self = [super init]) {

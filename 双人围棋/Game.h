@@ -23,6 +23,13 @@ typedef struct {
 } Coord;
 
 typedef enum {
+    ManToMan,
+    ManToMachine,
+    MachineToMan,
+    Online,
+} GameMode;
+
+typedef enum {
     INIT,
     WAIT_INPUT,
 } GameState;

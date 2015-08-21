@@ -226,4 +226,29 @@
         [[stone label] setHidden:!showHistory];
     }
 }
+
+- (int)takeBackMoveFor:(Player*)player
+{
+    int countTakeBack = 0;
+    Record *lastRec = [[self moveHistory] lastObject];
+    if (lastRec == nil) return countTakeBack;
+    NSLog(@"The move to be taken back is: %d", [[lastRec stoneVC] index]);
+    StoneViewController *stone = [lastRec stoneVC];
+    // remove from board view
+    [[stone view] removeFromSuperview];
+    // remove from board state
+    boardstate[[stone coord].x][[stone coord].y] = nil;
+    // remove from history
+    [[self moveHistory] removeLastObject];
+    
+    self.moveCount -= 1;
+    countTakeBack = 1;
+
+    if ([stone color] != [player color]) {
+        countTakeBack += [self takeBackMoveFor:player];
+    }
+    return countTakeBack;
+    
+}
+
 @end

@@ -25,4 +25,5 @@
 - (IBAction)setBoardSize:(id)sender;
 
 - (IBAction)toggleShowHistory:(id)sender;
+- (IBAction)takeBackMove:(id)sender;
 @end
