@@ -21,7 +21,7 @@
             <subviews>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CgN-fP-hzp">
                     <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="bottom" imageScaling="proportionallyDown" image="328A4005-06E3-4A8E-BCFF-88E035F64CD5" id="WoC-hs-3nY"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="bottom" imageScaling="proportionallyDown" image="E65AA7EC-4E08-4063-9F60-DF0C19FBD9F5" id="WoC-hs-3nY"/>
                 </imageView>
                 <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="od5-yf-mL9" userLabel="label">
                     <rect key="frame" x="4" y="10" width="32" height="20"/>
@@ -39,7 +39,7 @@
         <userDefaultsController representsSharedInstance="YES" id="mWy-kK-Ag4"/>
     </objects>
     <resources>
-        <image name="328A4005-06E3-4A8E-BCFF-88E035F64CD5" width="38" height="38">
+        <image name="E65AA7EC-4E08-4063-9F60-DF0C19FBD9F5" width="38" height="38">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISksLzU4VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA

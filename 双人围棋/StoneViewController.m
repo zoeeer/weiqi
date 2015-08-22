@@ -59,4 +59,17 @@
     // Do view setup here.
 }
 
+- (void)setSize:(CGFloat)size Position:(NSPoint)point
+{
+    NSView *cell = [self view];
+    NSRect frame = [cell frame];
+    frame.size.width = size;
+    frame.size.height = size;
+    frame.origin.x = point.x;
+    frame.origin.y = point.y;
+    [cell setFrame:frame];
+    [[self image] setFrameSize:frame.size];
+    [[self image] setFrame:[[self image] frame]];
+}
+
 @end

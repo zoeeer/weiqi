@@ -13,7 +13,8 @@
 		262A8B251A2B62B600E246F4 /* MyWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262A8B241A2B62B600E246F4 /* MyWindowController.m */; };
 		262A8B371A2B766700E246F4 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262A8B351A2B766700E246F4 /* GameController.m */; };
 		262A8B381A2B766700E246F4 /* Startup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 262A8B361A2B766700E246F4 /* Startup.xib */; };
-		26B35AA51A2DFC7C001E9569 /* Game.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B35AA41A2DFC7C001E9569 /* Game.xib */; };
+		268259501B8849F800D1C906 /* Game19.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2682594F1B8849F800D1C906 /* Game19.xib */; };
+		268259521B885AF400D1C906 /* Game9.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268259511B885AF400D1C906 /* Game9.xib */; };
 		26BBE6021A41C5B20013FF77 /* StoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BBE6001A41C5B20013FF77 /* StoneViewController.m */; };
 		26D675921A35F4CC0057638D /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D675911A35F4CC0057638D /* Cell.xib */; };
 		26FE2F981A1B989E00A5C566 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2F971A1B989E00A5C566 /* AppDelegate.m */; };
@@ -48,7 +49,8 @@
 		262A8B341A2B766700E246F4 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		262A8B351A2B766700E246F4 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 		262A8B361A2B766700E246F4 /* Startup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Startup.xib; sourceTree = "<group>"; };
-		26B35AA41A2DFC7C001E9569 /* Game.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Game.xib; sourceTree = "<group>"; };
+		2682594F1B8849F800D1C906 /* Game19.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Game19.xib; sourceTree = "<group>"; };
+		268259511B885AF400D1C906 /* Game9.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Game9.xib; sourceTree = "<group>"; };
 		26BBE5FF1A41C5B20013FF77 /* StoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoneViewController.h; sourceTree = "<group>"; };
 		26BBE6001A41C5B20013FF77 /* StoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoneViewController.m; sourceTree = "<group>"; };
 		26D675911A35F4CC0057638D /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
@@ -130,7 +132,8 @@
 				26D675911A35F4CC0057638D /* Cell.xib */,
 				26FE2F9D1A1B989F00A5C566 /* MainMenu.xib */,
 				262A8B361A2B766700E246F4 /* Startup.xib */,
-				26B35AA41A2DFC7C001E9569 /* Game.xib */,
+				268259511B885AF400D1C906 /* Game9.xib */,
+				2682594F1B8849F800D1C906 /* Game19.xib */,
 				262A8AE81A1F7B0500E246F4 /* 双人围棋.entitlements */,
 				26FE2F9B1A1B989F00A5C566 /* Images.xcassets */,
 				26FE2F951A1B989E00A5C566 /* Info.plist */,
@@ -242,10 +245,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				26FE2F9C1A1B989F00A5C566 /* Images.xcassets in Resources */,
+				268259501B8849F800D1C906 /* Game19.xib in Resources */,
 				26D675921A35F4CC0057638D /* Cell.xib in Resources */,
 				26FE2F9F1A1B989F00A5C566 /* MainMenu.xib in Resources */,
 				262A8B381A2B766700E246F4 /* Startup.xib in Resources */,
-				26B35AA51A2DFC7C001E9569 /* Game.xib in Resources */,
+				268259521B885AF400D1C906 /* Game9.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,13 +27,14 @@
 
 - (instancetype)initWithSettings:(Settings *)asettings
 {
-    if (self = [super initWithNibName:@"Game" bundle:nil]) {
+    boardsize = [asettings board_size];
+    NSString *nibName = [NSString stringWithFormat:@"Game%d", (int)boardsize];
+    if (self = [super initWithNibName:nibName bundle:nil]) {
         // init board view according to board size
         [self setSettings:asettings];
     }
     // Init Game Properties
     //[self setBoardsize:[asettings board_size]];
-    boardsize = [asettings board_size];
     
     [self setPlayer1:[[Player alloc] initWithColor:BLACK]];
     [self setPlayer2:[[Player alloc] initWithColor:WHITE]];
@@ -52,7 +53,7 @@
         }
     }
     
-    NSLog(@"game view controller initWithSettings");
+    NSLog(@"game view controller initWithSettings NibName is :%@", nibName);
 
     return self;
 }
@@ -61,7 +62,12 @@
 {
     [[self board] setBoardsize:[[self settings] board_size]];
     //[[self board] setCurrentColor:BLACK];
-    [[self board] setCellsize:40];
+    if ([[self settings] board_size] > 15) {
+        [[self board] setCellsize:30];
+    }
+    else {
+        [[self board] setCellsize:40];
+    }
     [[self board] setAllowClick: NO];
     [[self board] setGameDelegate: self];
 }
