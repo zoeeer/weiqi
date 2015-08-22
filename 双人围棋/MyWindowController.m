@@ -73,7 +73,7 @@
     NSSize contentSize = myTargetView.frame.size;
     NSSize targetSize = [gameController view].frame.size;
     // For simplicity in early version, only show the board
-    frame.size.width += targetSize.height - contentSize.width;
+    frame.size.width += targetSize.width - contentSize.width;
     frame.size.height += targetSize.height - contentSize.height;
     frame.origin.y -= targetSize.height - contentSize.height;
     NSLog(@"modified window origin is %f, %f", frame.origin.x, frame.origin.y);

@@ -61,7 +61,10 @@
 {
     [[self board] setBoardsize:[[self settings] board_size]];
     //[[self board] setCurrentColor:BLACK];
-    [[self board] setCellsize:40];
+    if (boardsize > 15)
+        [[self board] setCellsize:30];
+    else
+        [[self board] setCellsize:40];
     [[self board] setAllowClick: NO];
     [[self board] setGameDelegate: self];
 }
