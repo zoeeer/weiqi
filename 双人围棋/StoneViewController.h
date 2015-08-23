@@ -19,5 +19,6 @@
 
 //- (instancetype)initWithColor:(Color)color Index:(int)index;
 - (instancetype)initWithColor:(Color)color Index:(int)index Coord:(Coord) acoord;
+- (instancetype)initWithNibName:(NSString*)nibName Color:(Color)color Index:(int)index Coord:(Coord) acoord;
 - (void)setSize:(CGFloat)size Position:(NSPoint)point;
 @end

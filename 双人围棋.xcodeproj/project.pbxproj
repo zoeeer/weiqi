@@ -15,6 +15,7 @@
 		262A8B381A2B766700E246F4 /* Startup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 262A8B361A2B766700E246F4 /* Startup.xib */; };
 		268259501B8849F800D1C906 /* Game19.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2682594F1B8849F800D1C906 /* Game19.xib */; };
 		268259521B885AF400D1C906 /* Game9.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268259511B885AF400D1C906 /* Game9.xib */; };
+		268259541B89FEFA00D1C906 /* Cell_small.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268259531B89FEFA00D1C906 /* Cell_small.xib */; };
 		26BBE6021A41C5B20013FF77 /* StoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BBE6001A41C5B20013FF77 /* StoneViewController.m */; };
 		26D675921A35F4CC0057638D /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D675911A35F4CC0057638D /* Cell.xib */; };
 		26FE2F981A1B989E00A5C566 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2F971A1B989E00A5C566 /* AppDelegate.m */; };
@@ -51,6 +52,7 @@
 		262A8B361A2B766700E246F4 /* Startup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Startup.xib; sourceTree = "<group>"; };
 		2682594F1B8849F800D1C906 /* Game19.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Game19.xib; sourceTree = "<group>"; };
 		268259511B885AF400D1C906 /* Game9.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Game9.xib; sourceTree = "<group>"; };
+		268259531B89FEFA00D1C906 /* Cell_small.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell_small.xib; sourceTree = "<group>"; };
 		26BBE5FF1A41C5B20013FF77 /* StoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoneViewController.h; sourceTree = "<group>"; };
 		26BBE6001A41C5B20013FF77 /* StoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoneViewController.m; sourceTree = "<group>"; };
 		26D675911A35F4CC0057638D /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				26D675911A35F4CC0057638D /* Cell.xib */,
+				268259531B89FEFA00D1C906 /* Cell_small.xib */,
 				26FE2F9D1A1B989F00A5C566 /* MainMenu.xib */,
 				262A8B361A2B766700E246F4 /* Startup.xib */,
 				268259511B885AF400D1C906 /* Game9.xib */,
@@ -248,6 +251,7 @@
 				268259501B8849F800D1C906 /* Game19.xib in Resources */,
 				26D675921A35F4CC0057638D /* Cell.xib in Resources */,
 				26FE2F9F1A1B989F00A5C566 /* MainMenu.xib in Resources */,
+				268259541B89FEFA00D1C906 /* Cell_small.xib in Resources */,
 				262A8B381A2B766700E246F4 /* Startup.xib in Resources */,
 				268259521B885AF400D1C906 /* Game9.xib in Resources */,
 			);

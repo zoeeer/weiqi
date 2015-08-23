@@ -18,6 +18,17 @@
 
 @implementation StoneViewController
 
+- (instancetype)initWithNibName:(NSString*)nibName Color:(Color)color Index:(int)index Coord:(Coord) acoord
+{
+    if (self = [super initWithNibName:nibName bundle:nil]) {
+        [self setColor:color];
+        [self setIndex:index];
+        [self setCoord:acoord];
+        [[self view] setHidden:YES];
+    }
+    return self;    
+}
+
 - (instancetype)initWithColor:(Color)color Index:(int)index Coord:(Coord) acoord
 {
     if (self = [super initWithNibName:@"Cell" bundle:nil]) {
@@ -68,8 +79,8 @@
     frame.origin.x = point.x;
     frame.origin.y = point.y;
     [cell setFrame:frame];
-    [[self image] setFrameSize:frame.size];
-    [[self image] setFrame:[[self image] frame]];
+    //[[self image] setFrameSize:frame.size];
+    //[[[self image] image] setSize:frame.size];
 }
 
 @end
