@@ -43,7 +43,7 @@
     // Load Preferences
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [[self settings] setBoard_size:[defaults integerForKey:Key_BoardSize]];
-    if ([[self settings] board_size] == 0) [[self settings] setBoard_size:9];
+    if ([[self settings] board_size] == 0) [[self settings] setBoard_size:DefaultBoardSize];
     //NSInteger mode = [defaults integerForKey:@"Default Mode"];
     //NSInteger handicap = [defaults integerForKey:@"Default Handicap"];
     //CGFloat komi = [defaults floatForKey:@"Default Compensation"];
@@ -56,6 +56,15 @@
 
 - (IBAction)start:(id)sender {
     NSLog(@"Board size is %ld", [self.settings board_size]);
+    
+    // set size to UserDefaults
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([self.settings board_size] != DefaultBoardSize) {
+        [defaults setInteger:[self.settings board_size] forKey:Key_BoardSize];
+    }
+    else {
+        [defaults removeObjectForKey:Key_BoardSize];
+    }
     
     // initialize game view from nib file
     [self willChangeValueForKey:@"gameController"];

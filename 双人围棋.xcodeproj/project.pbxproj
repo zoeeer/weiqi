@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		260636511B876C7400A54D6B /* BoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 260636501B876C7400A54D6B /* BoardView.m */; };
+		262A8AED1A21EFE400E246F4 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 262A8AEC1A21EFE400E246F4 /* Game.m */; };
+		262A8AF01A21F16D00E246F4 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 262A8AEF1A21F16D00E246F4 /* Settings.m */; };
+		262A8B251A2B62B600E246F4 /* MyWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262A8B241A2B62B600E246F4 /* MyWindowController.m */; };
+		262A8B371A2B766700E246F4 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262A8B351A2B766700E246F4 /* GameController.m */; };
+		262A8B381A2B766700E246F4 /* Startup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 262A8B361A2B766700E246F4 /* Startup.xib */; };
+		268259501B8849F800D1C906 /* Game19.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2682594F1B8849F800D1C906 /* Game19.xib */; };
+		268259521B885AF400D1C906 /* Game9.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268259511B885AF400D1C906 /* Game9.xib */; };
+		268259541B89FEFA00D1C906 /* Cell_small.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268259531B89FEFA00D1C906 /* Cell_small.xib */; };
+		26BBE6021A41C5B20013FF77 /* StoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26BBE6001A41C5B20013FF77 /* StoneViewController.m */; };
+		26D675921A35F4CC0057638D /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D675911A35F4CC0057638D /* Cell.xib */; };
+		26FE2F981A1B989E00A5C566 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2F971A1B989E00A5C566 /* AppDelegate.m */; };
+		26FE2F9A1A1B989E00A5C566 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2F991A1B989E00A5C566 /* main.m */; };
+		26FE2F9C1A1B989F00A5C566 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FE2F9B1A1B989F00A5C566 /* Images.xcassets */; };
+		26FE2F9F1A1B989F00A5C566 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26FE2F9D1A1B989F00A5C566 /* MainMenu.xib */; };
+		26FE2FAB1A1B989F00A5C566 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2FAA1A1B989F00A5C566 /* ____Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26FE2FA51A1B989F00A5C566 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26FE2F891A1B989E00A5C566 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26FE2F901A1B989E00A5C566;
+			remoteInfo = "双人围棋";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		260636501B876C7400A54D6B /* BoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardView.m; sourceTree = "<group>"; };
+		260636521B876C9B00A54D6B /* BoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoardView.h; sourceTree = "<group>"; };
+		262A8AE81A1F7B0500E246F4 /* 双人围棋.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "双人围棋.entitlements"; sourceTree = "<group>"; };
+		262A8AE91A1F7C3700E246F4 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/MainMenu.strings"; sourceTree = "<group>"; };
+		262A8AEA1A1F7C4400E246F4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
+		262A8AEB1A21EFE400E246F4 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		262A8AEC1A21EFE400E246F4 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		262A8AEE1A21F16D00E246F4 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		262A8AEF1A21F16D00E246F4 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		262A8B231A2B62B600E246F4 /* MyWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWindowController.h; sourceTree = "<group>"; };
+		262A8B241A2B62B600E246F4 /* MyWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWindowController.m; sourceTree = "<group>"; };
+		262A8B341A2B766700E246F4 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		262A8B351A2B766700E246F4 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
+		262A8B361A2B766700E246F4 /* Startup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Startup.xib; sourceTree = "<group>"; };
+		2682594F1B8849F800D1C906 /* Game19.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Game19.xib; sourceTree = "<group>"; };
+		268259511B885AF400D1C906 /* Game9.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Game9.xib; sourceTree = "<group>"; };
+		268259531B89FEFA00D1C906 /* Cell_small.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell_small.xib; sourceTree = "<group>"; };
+		26BBE5FF1A41C5B20013FF77 /* StoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoneViewController.h; sourceTree = "<group>"; };
+		26BBE6001A41C5B20013FF77 /* StoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoneViewController.m; sourceTree = "<group>"; };
+		26D675911A35F4CC0057638D /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
+		26FE2F911A1B989E00A5C566 /* 双人围棋.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "双人围棋.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26FE2F951A1B989E00A5C566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26FE2F961A1B989E00A5C566 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		26FE2F971A1B989E00A5C566 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		26FE2F991A1B989E00A5C566 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		26FE2F9B1A1B989F00A5C566 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		26FE2F9E1A1B989F00A5C566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		26FE2FA41A1B989F00A5C566 /* 双人围棋Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "双人围棋Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26FE2FA91A1B989F00A5C566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26FE2FAA1A1B989F00A5C566 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26FE2F8E1A1B989E00A5C566 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26FE2FA11A1B989F00A5C566 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26FE2F881A1B989E00A5C566 = {
+			isa = PBXGroup;
+			children = (
+				26FE2F941A1B989E00A5C566 /* Resources */,
+				26FE2F931A1B989E00A5C566 /* Classes */,
+				26FE2FA71A1B989F00A5C566 /* 双人围棋Tests */,
+				26FE2F921A1B989E00A5C566 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26FE2F921A1B989E00A5C566 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26FE2F911A1B989E00A5C566 /* 双人围棋.app */,
+				26FE2FA41A1B989F00A5C566 /* 双人围棋Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26FE2F931A1B989E00A5C566 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				26FE2F991A1B989E00A5C566 /* main.m */,
+				26FE2F961A1B989E00A5C566 /* AppDelegate.h */,
+				26FE2F971A1B989E00A5C566 /* AppDelegate.m */,
+				262A8B231A2B62B600E246F4 /* MyWindowController.h */,
+				262A8B241A2B62B600E246F4 /* MyWindowController.m */,
+				260636521B876C9B00A54D6B /* BoardView.h */,
+				260636501B876C7400A54D6B /* BoardView.m */,
+				262A8B341A2B766700E246F4 /* GameController.h */,
+				262A8B351A2B766700E246F4 /* GameController.m */,
+				26BBE5FF1A41C5B20013FF77 /* StoneViewController.h */,
+				26BBE6001A41C5B20013FF77 /* StoneViewController.m */,
+				262A8AEB1A21EFE400E246F4 /* Game.h */,
+				262A8AEC1A21EFE400E246F4 /* Game.m */,
+				262A8AEE1A21F16D00E246F4 /* Settings.h */,
+				262A8AEF1A21F16D00E246F4 /* Settings.m */,
+			);
+			name = Classes;
+			path = "双人围棋";
+			sourceTree = "<group>";
+		};
+		26FE2F941A1B989E00A5C566 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				26D675911A35F4CC0057638D /* Cell.xib */,
+				268259531B89FEFA00D1C906 /* Cell_small.xib */,
+				26FE2F9D1A1B989F00A5C566 /* MainMenu.xib */,
+				262A8B361A2B766700E246F4 /* Startup.xib */,
+				268259511B885AF400D1C906 /* Game9.xib */,
+				2682594F1B8849F800D1C906 /* Game19.xib */,
+				262A8AE81A1F7B0500E246F4 /* 双人围棋.entitlements */,
+				26FE2F9B1A1B989F00A5C566 /* Images.xcassets */,
+				26FE2F951A1B989E00A5C566 /* Info.plist */,
+			);
+			name = Resources;
+			path = "双人围棋";
+			sourceTree = "<group>";
+		};
+		26FE2FA71A1B989F00A5C566 /* 双人围棋Tests */ = {
+			isa = PBXGroup;
+			children = (
+				26FE2FAA1A1B989F00A5C566 /* ____Tests.m */,
+				26FE2FA81A1B989F00A5C566 /* Supporting Files */,
+			);
+			path = "双人围棋Tests";
+			sourceTree = "<group>";
+		};
+		26FE2FA81A1B989F00A5C566 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				26FE2FA91A1B989F00A5C566 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26FE2F901A1B989E00A5C566 /* 双人围棋 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26FE2FAE1A1B989F00A5C566 /* Build configuration list for PBXNativeTarget "双人围棋" */;
+			buildPhases = (
+				26FE2F8D1A1B989E00A5C566 /* Sources */,
+				26FE2F8E1A1B989E00A5C566 /* Frameworks */,
+				26FE2F8F1A1B989E00A5C566 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "双人围棋";
+			productName = "双人围棋";
+			productReference = 26FE2F911A1B989E00A5C566 /* 双人围棋.app */;
+			productType = "com.apple.product-type.application";
+		};
+		26FE2FA31A1B989F00A5C566 /* 双人围棋Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26FE2FB11A1B989F00A5C566 /* Build configuration list for PBXNativeTarget "双人围棋Tests" */;
+			buildPhases = (
+				26FE2FA01A1B989F00A5C566 /* Sources */,
+				26FE2FA11A1B989F00A5C566 /* Frameworks */,
+				26FE2FA21A1B989F00A5C566 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26FE2FA61A1B989F00A5C566 /* PBXTargetDependency */,
+			);
+			name = "双人围棋Tests";
+			productName = "双人围棋Tests";
+			productReference = 26FE2FA41A1B989F00A5C566 /* 双人围棋Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26FE2F891A1B989E00A5C566 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Rang;
+				TargetAttributes = {
+					26FE2F901A1B989E00A5C566 = {
+						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					26FE2FA31A1B989F00A5C566 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 26FE2F901A1B989E00A5C566;
+					};
+				};
+			};
+			buildConfigurationList = 26FE2F8C1A1B989E00A5C566 /* Build configuration list for PBXProject "双人围棋" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26FE2F881A1B989E00A5C566;
+			productRefGroup = 26FE2F921A1B989E00A5C566 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26FE2F901A1B989E00A5C566 /* 双人围棋 */,
+				26FE2FA31A1B989F00A5C566 /* 双人围棋Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26FE2F8F1A1B989E00A5C566 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26FE2F9C1A1B989F00A5C566 /* Images.xcassets in Resources */,
+				268259501B8849F800D1C906 /* Game19.xib in Resources */,
+				26D675921A35F4CC0057638D /* Cell.xib in Resources */,
+				26FE2F9F1A1B989F00A5C566 /* MainMenu.xib in Resources */,
+				268259541B89FEFA00D1C906 /* Cell_small.xib in Resources */,
+				262A8B381A2B766700E246F4 /* Startup.xib in Resources */,
+				268259521B885AF400D1C906 /* Game9.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26FE2FA21A1B989F00A5C566 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26FE2F8D1A1B989E00A5C566 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26BBE6021A41C5B20013FF77 /* StoneViewController.m in Sources */,
+				260636511B876C7400A54D6B /* BoardView.m in Sources */,
+				26FE2F9A1A1B989E00A5C566 /* main.m in Sources */,
+				262A8AF01A21F16D00E246F4 /* Settings.m in Sources */,
+				26FE2F981A1B989E00A5C566 /* AppDelegate.m in Sources */,
+				262A8AED1A21EFE400E246F4 /* Game.m in Sources */,
+				262A8B251A2B62B600E246F4 /* MyWindowController.m in Sources */,
+				262A8B371A2B766700E246F4 /* GameController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26FE2FA01A1B989F00A5C566 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26FE2FAB1A1B989F00A5C566 /* ____Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26FE2FA61A1B989F00A5C566 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26FE2F901A1B989E00A5C566 /* 双人围棋 */;
+			targetProxy = 26FE2FA51A1B989F00A5C566 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		26FE2F9D1A1B989F00A5C566 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26FE2F9E1A1B989F00A5C566 /* Base */,
+				262A8AE91A1F7C3700E246F4 /* zh-Hant */,
+				262A8AEA1A1F7C4400E246F4 /* zh-Hans */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26FE2FAC1A1B989F00A5C566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		26FE2FAD1A1B989F00A5C566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		26FE2FAF1A1B989F00A5C566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "双人围棋/双人围棋.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "双人围棋/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		26FE2FB01A1B989F00A5C566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "双人围棋/双人围棋.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "双人围棋/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		26FE2FB21A1B989F00A5C566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "双人围棋Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/双人围棋.app/Contents/MacOS/双人围棋";
+			};
+			name = Debug;
+		};
+		26FE2FB31A1B989F00A5C566 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "双人围棋Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/双人围棋.app/Contents/MacOS/双人围棋";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26FE2F8C1A1B989E00A5C566 /* Build configuration list for PBXProject "双人围棋" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26FE2FAC1A1B989F00A5C566 /* Debug */,
+				26FE2FAD1A1B989F00A5C566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26FE2FAE1A1B989F00A5C566 /* Build configuration list for PBXNativeTarget "双人围棋" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26FE2FAF1A1B989F00A5C566 /* Debug */,
+				26FE2FB01A1B989F00A5C566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26FE2FB11A1B989F00A5C566 /* Build configuration list for PBXNativeTarget "双人围棋Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26FE2FB21A1B989F00A5C566 /* Debug */,
+				26FE2FB31A1B989F00A5C566 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26FE2F891A1B989E00A5C566 /* Project object */;
+}

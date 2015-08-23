@@ -103,14 +103,11 @@
 
 - (id)addStoneOfColor:(Color)color Coord:(Coord)coord Index:(int)index
 {
-    StoneViewController *stoneVC = [[StoneViewController alloc] initWithColor:color Index:index Coord:coord];
-    NSView *cell = [stoneVC view];
-    NSRect frame = [cell frame];
+    NSString *nibName = [self boardsize] > 15 ? @"Cell_small" : @"Cell";
+    StoneViewController *stoneVC = [[StoneViewController alloc] initWithNibName:nibName Color:color Index:index Coord:coord];
     NSPoint point = [self convertCoordToPoint:coord];
-    frame.origin.x = point.x;
-    frame.origin.y = point.y;
-    [cell setFrame:frame];
-    [self addSubview:cell];
+    [stoneVC setSize:[self cellsize] Position:point];
+    [self addSubview:[stoneVC view]];
     return stoneVC;
 }
 

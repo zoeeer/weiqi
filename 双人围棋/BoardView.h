@@ -29,7 +29,7 @@
 
 @property NSInteger boardsize;
 @property CGFloat cellsize;
-@property NSViewController *cellController;
+//@property NSViewController *cellController;
 @property BOOL allowClick;
 @property id gameDelegate;
 - (Coord)convertCoordFromPoint:(NSPoint)aPoint;

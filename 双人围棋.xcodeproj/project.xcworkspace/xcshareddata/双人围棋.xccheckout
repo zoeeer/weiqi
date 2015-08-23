@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1E06FC36-D36B-474F-B304-068E6EE3B65B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>双人围棋</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FEB5F479EA94492D4E46EF2414813709321AB1BE</key>
+		<string>https://github.com/zoeeer/weiqi.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>双人围棋.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FEB5F479EA94492D4E46EF2414813709321AB1BE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/zoeeer/weiqi.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FEB5F479EA94492D4E46EF2414813709321AB1BE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FEB5F479EA94492D4E46EF2414813709321AB1BE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>%E5%8F%8C%E4%BA%BA%E5%9B%B4%E6%A3%8B</string>
+		</dict>
+	</array>
+</dict>
+</plist>

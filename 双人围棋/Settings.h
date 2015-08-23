@@ -10,7 +10,7 @@
 
 #import "Game.h"
 
-# define DefaultBoardSize 9
+# define DefaultBoardSize 19
 # define DefaultShowHistory false
 # define Key_ShowHistory @"Default Show History"
 # define Key_BoardSize @"Default Board Size"
