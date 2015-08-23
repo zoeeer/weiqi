@@ -30,7 +30,7 @@
         </customView>
     </objects>
     <resources>
-        <image name="board9" width="326" height="326"/>
+        <image name="board9" width="450" height="450"/>
         <image name="wood texture" width="3200" height="3200"/>
     </resources>
 </document>
