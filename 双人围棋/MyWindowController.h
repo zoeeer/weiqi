@@ -16,9 +16,6 @@
     GameController *gameController;
     __weak IBOutlet NSView *startupView;
     __weak IBOutlet NSView	*myTargetView;
-//    IBOutlet NSView *gameView9;
-//    IBOutlet NSView *gameView19;
-    
 }
 
 //@property GameController *gameController;
