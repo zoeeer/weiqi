@@ -22,18 +22,7 @@
 		26FE2F9A1A1B989E00A5C566 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2F991A1B989E00A5C566 /* main.m */; };
 		26FE2F9C1A1B989F00A5C566 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FE2F9B1A1B989F00A5C566 /* Images.xcassets */; };
 		26FE2F9F1A1B989F00A5C566 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26FE2F9D1A1B989F00A5C566 /* MainMenu.xib */; };
-		26FE2FAB1A1B989F00A5C566 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FE2FAA1A1B989F00A5C566 /* ____Tests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		26FE2FA51A1B989F00A5C566 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 26FE2F891A1B989E00A5C566 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 26FE2F901A1B989E00A5C566;
-			remoteInfo = "双人围棋";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		260636501B876C7400A54D6B /* BoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardView.m; sourceTree = "<group>"; };
@@ -63,20 +52,10 @@
 		26FE2F991A1B989E00A5C566 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		26FE2F9B1A1B989F00A5C566 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		26FE2F9E1A1B989F00A5C566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		26FE2FA41A1B989F00A5C566 /* 双人围棋Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "双人围棋Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		26FE2FA91A1B989F00A5C566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26FE2FAA1A1B989F00A5C566 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		26FE2F8E1A1B989E00A5C566 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		26FE2FA11A1B989F00A5C566 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -91,7 +70,6 @@
 			children = (
 				26FE2F941A1B989E00A5C566 /* Resources */,
 				26FE2F931A1B989E00A5C566 /* Classes */,
-				26FE2FA71A1B989F00A5C566 /* 双人围棋Tests */,
 				26FE2F921A1B989E00A5C566 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				26FE2F911A1B989E00A5C566 /* 双人围棋.app */,
-				26FE2FA41A1B989F00A5C566 /* 双人围棋Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,23 +122,6 @@
 			path = "双人围棋";
 			sourceTree = "<group>";
 		};
-		26FE2FA71A1B989F00A5C566 /* 双人围棋Tests */ = {
-			isa = PBXGroup;
-			children = (
-				26FE2FAA1A1B989F00A5C566 /* ____Tests.m */,
-				26FE2FA81A1B989F00A5C566 /* Supporting Files */,
-			);
-			path = "双人围棋Tests";
-			sourceTree = "<group>";
-		};
-		26FE2FA81A1B989F00A5C566 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				26FE2FA91A1B989F00A5C566 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,24 +142,6 @@
 			productReference = 26FE2F911A1B989E00A5C566 /* 双人围棋.app */;
 			productType = "com.apple.product-type.application";
 		};
-		26FE2FA31A1B989F00A5C566 /* 双人围棋Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 26FE2FB11A1B989F00A5C566 /* Build configuration list for PBXNativeTarget "双人围棋Tests" */;
-			buildPhases = (
-				26FE2FA01A1B989F00A5C566 /* Sources */,
-				26FE2FA11A1B989F00A5C566 /* Frameworks */,
-				26FE2FA21A1B989F00A5C566 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				26FE2FA61A1B989F00A5C566 /* PBXTargetDependency */,
-			);
-			name = "双人围棋Tests";
-			productName = "双人围棋Tests";
-			productReference = 26FE2FA41A1B989F00A5C566 /* 双人围棋Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -217,10 +159,6 @@
 							};
 						};
 					};
-					26FE2FA31A1B989F00A5C566 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 26FE2F901A1B989E00A5C566;
-					};
 				};
 			};
 			buildConfigurationList = 26FE2F8C1A1B989E00A5C566 /* Build configuration list for PBXProject "双人围棋" */;
@@ -237,7 +175,6 @@
 			projectRoot = "";
 			targets = (
 				26FE2F901A1B989E00A5C566 /* 双人围棋 */,
-				26FE2FA31A1B989F00A5C566 /* 双人围棋Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -254,13 +191,6 @@
 				268259541B89FEFA00D1C906 /* Cell_small.xib in Resources */,
 				262A8B381A2B766700E246F4 /* Startup.xib in Resources */,
 				268259521B885AF400D1C906 /* Game9.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		26FE2FA21A1B989F00A5C566 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,23 +212,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		26FE2FA01A1B989F00A5C566 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				26FE2FAB1A1B989F00A5C566 /* ____Tests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		26FE2FA61A1B989F00A5C566 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 26FE2F901A1B989E00A5C566 /* 双人围棋 */;
-			targetProxy = 26FE2FA51A1B989F00A5C566 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		26FE2F9D1A1B989F00A5C566 /* MainMenu.xib */ = {
@@ -414,42 +328,6 @@
 			};
 			name = Release;
 		};
-		26FE2FB21A1B989F00A5C566 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "双人围棋Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/双人围棋.app/Contents/MacOS/双人围棋";
-			};
-			name = Debug;
-		};
-		26FE2FB31A1B989F00A5C566 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "双人围棋Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/双人围棋.app/Contents/MacOS/双人围棋";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -467,15 +345,6 @@
 			buildConfigurations = (
 				26FE2FAF1A1B989F00A5C566 /* Debug */,
 				26FE2FB01A1B989F00A5C566 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		26FE2FB11A1B989F00A5C566 /* Build configuration list for PBXNativeTarget "双人围棋Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				26FE2FB21A1B989F00A5C566 /* Debug */,
-				26FE2FB31A1B989F00A5C566 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
