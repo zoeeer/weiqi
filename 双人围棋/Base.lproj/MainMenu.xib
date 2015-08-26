@@ -143,33 +143,6 @@
                                     <binding destination="cz6-9m-4Gw" name="value" keyPath="self.settings.showHistory" id="87e-HO-muz"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Hide History" hidden="YES" enabled="NO" keyEquivalent="v" id="gVA-U4-sdL">
-                                <connections>
-                                    <action selector="paste:" target="-1" id="UvS-8e-Qdg"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="WRV-NI-Exz"/>
-                            <menuItem title="Cut" enabled="NO" keyEquivalent="x" id="uRl-iY-unG">
-                                <connections>
-                                    <action selector="cut:" target="-1" id="YJe-68-I9s"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Copy" enabled="NO" keyEquivalent="c" id="x3v-GG-iWU">
-                                <connections>
-                                    <action selector="copy:" target="-1" id="G1f-GL-Joy"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Delete" enabled="NO" id="pa3-QI-u2k">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="delete:" target="-1" id="0Mk-Ml-PaM"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Select All" enabled="NO" keyEquivalent="a" id="Ruw-6m-B2m">
-                                <connections>
-                                    <action selector="selectAll:" target="-1" id="VNm-Mi-diN"/>
-                                </connections>
-                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>
@@ -234,10 +207,10 @@
         <window title="Weiqi" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
+            <rect key="contentRect" x="345" y="300" width="400" height="400"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                 <autoresizingMask key="autoresizingMask"/>
             </view>
             <point key="canvasLocation" x="327" y="352"/>
@@ -245,51 +218,8 @@
         <customObject id="cz6-9m-4Gw" userLabel="Window Controller" customClass="MyWindowController">
             <connections>
                 <outlet property="myTargetView" destination="EiT-Mj-1SZ" id="HMf-f6-iop"/>
-                <outlet property="startupView" destination="F0B-xT-KtS" id="EcU-gi-esn"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="vzG-Dr-sei"/>
             </connections>
         </customObject>
-        <customView id="F0B-xT-KtS" userLabel="StartupView">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KQb-yD-FOm">
-                    <rect key="frame" x="155" y="167" width="95" height="22"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Board Size" id="1ih-Lr-JfH">
-                        <font key="font" metaFont="system" size="18"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="19" translatesAutoresizingMaskIntoConstraints="NO" id="RV3-E0-8Xq" userLabel="select_size">
-                    <rect key="frame" x="268" y="164" width="59" height="26"/>
-                    <popUpButtonCell key="cell" type="push" title="9" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="9" imageScaling="proportionallyDown" inset="2" selectedItem="8Wl-0B-iwI" id="DNp-Un-tQ3">
-                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="menu"/>
-                        <menu key="menu" id="Yrm-eM-4FK">
-                            <items>
-                                <menuItem title="5" tag="5" id="Yuw-JC-3Qo"/>
-                                <menuItem title="9" state="on" tag="9" id="8Wl-0B-iwI"/>
-                                <menuItem title="15" tag="15" id="19T-dH-c7V"/>
-                                <menuItem title="19" tag="19" id="PkG-Pq-YIk" userLabel="19"/>
-                            </items>
-                        </menu>
-                    </popUpButtonCell>
-                    <connections>
-                        <action selector="setBoardSize:" target="cz6-9m-4Gw" id="zRY-m9-TOy"/>
-                    </connections>
-                </popUpButton>
-                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M9V-L7-1k2">
-                    <rect key="frame" x="201" y="43" width="80" height="48"/>
-                    <buttonCell key="cell" type="square" title="Start" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="H3D-Kq-cKo">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="18"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="start:" target="cz6-9m-4Gw" id="Ffk-Nd-7fR"/>
-                    </connections>
-                </button>
-            </subviews>
-        </customView>
     </objects>
 </document>

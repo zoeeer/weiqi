@@ -34,10 +34,10 @@
     //[[self window] setAutorecalculatesContentBorderThickness:YES forEdge:NSMinYEdge];
     //[[self window] setContentBorderThickness:30 forEdge:NSMinYEdge];
     
-    [myTargetView addSubview:startupView];
+    //[myTargetView addSubview:startupView];
     
     // make sure we resize the viewController's view to match its super view
-    [startupView setFrame:[myTargetView bounds]];
+    //[startupView setFrame:[myTargetView bounds]];
     
     [self setSettings:[[Settings alloc] init]];
     // Load Preferences
@@ -52,6 +52,7 @@
     }
     
     NSLog(@"Default board size is %ld", [self.settings board_size]);
+    [self start];
 }
 
 - (IBAction)start:(id)sender {
@@ -94,6 +95,30 @@
     
     // Start to Run Game
     [gameController run];
+}
+
+- (void)start
+{
+    // initialize game view from nib file
+    [self willChangeValueForKey:@"gameController"];
+    gameController = [[GameController alloc] initWithSettings:[self settings]];
+    [self didChangeValueForKey:@"gameController"];
+    
+    // set window size to fit board
+    NSRect frame = [[self window] frame];
+    NSSize contentSize = myTargetView.frame.size;
+    NSSize targetSize = [gameController view].frame.size;
+    frame.size.width += targetSize.width - contentSize.width;
+    frame.size.height += targetSize.height - contentSize.height;
+    frame.origin.y -= targetSize.height - contentSize.height;
+
+    [[self window] setFrame:frame display:YES animate:YES];
+    [myTargetView addSubview:[gameController view]];
+    [[gameController view]  setFrame:[myTargetView bounds]];
+    
+    // Start to Run Game
+    [gameController run];
+    
 }
 
 - (IBAction)setBoardSize:(id)sender {

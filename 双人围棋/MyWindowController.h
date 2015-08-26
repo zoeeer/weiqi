@@ -26,4 +26,5 @@
 
 - (IBAction)toggleShowHistory:(id)sender;
 - (IBAction)takeBackMove:(id)sender;
+- (void)start;
 @end
