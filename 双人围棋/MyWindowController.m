@@ -160,4 +160,25 @@
         [gameController takeBackMoveFor:[gameController currentplayer]];
     }
 }
+
+//- (void)save
+- (IBAction)saveAs:(id)sender
+{
+    NSWindow* window = [self window];
+    NSString* defaultName = @"Untitled.sht";
+    // Set the default name for the file and show the panel.
+    NSSavePanel* panel = [NSSavePanel savePanel];
+    [panel setNameFieldStringValue:defaultName];
+    [panel beginSheetModalForWindow:window completionHandler:^(NSInteger result){
+        if (result == NSFileHandlingPanelOKButton)
+        {
+            NSURL*  fileURL = [panel URL];
+            //NSFileManager*fm = [NSFileManager defaultManager];
+            // Write the contents in the new format.
+            NSString* content = @"Hello my first weiqi game - test\n";
+            [content writeToURL:fileURL atomically:NO encoding:NSUTF8StringEncoding error:nil];
+        }
+    }];
+}
+     
 @end

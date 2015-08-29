@@ -46,6 +46,9 @@
 {
     if (self = [super init]) {
         [self setColor:color];
+        if (color != NONE && [self name] == nil) {
+            [self setName:color == BLACK? @"Black" : @"White"];
+        }
     }
     return self;
 }

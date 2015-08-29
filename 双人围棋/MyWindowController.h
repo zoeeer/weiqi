@@ -27,4 +27,7 @@
 - (IBAction)toggleShowHistory:(id)sender;
 - (IBAction)takeBackMove:(id)sender;
 - (void)start;
+
+// file access
+- (IBAction)saveAs:(id)sender;
 @end
