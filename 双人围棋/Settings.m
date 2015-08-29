@@ -24,7 +24,7 @@
 }
 
 - (instancetype)initWithSize:(NSInteger)size Mode:(GameMode)mode
-                    Handicap:(NSInteger)han Komi:(NSInteger) komi
+                    Handicap:(NSInteger)han Komi:(CGFloat) komi
 {
     if (self = [super init]) {
         [self setBoard_size:size];

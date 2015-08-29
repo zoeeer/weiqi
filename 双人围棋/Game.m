@@ -9,12 +9,15 @@
 #import "Game.h"
 #import "Settings.h"
 
+#import "StoneViewController.h"
 /**********************************************
  ****                Record                ****
  **********************************************/
 @interface Record ()
 @property (readwrite) StoneViewController *stoneVC;
 @property (readwrite) NSArray *captured;
+//@property (readwrite) NSString *recString;
+@property (readwrite) char *rec;
 @end
 
 @implementation Record
@@ -24,23 +27,27 @@
     if (self = [super init]) {
         [self setStoneVC:stonevc];
         [self setCaptured:capturedArray];
+
+        _rec = NSAllocateCollectable(4, 0);
+        _rec[0] = [stonevc color] == BLACK ? 'B' : 'W';
+        _rec[1] = [stonevc coord].x + 'a';
+        _rec[2] = [stonevc coord].y + 'a';
+        _rec[3] = '\0';
     }
     return self;
 }
+
+- (NSString *)toString
+{
+    return [[NSString alloc] initWithCString:_rec encoding:NSUTF8StringEncoding];
+}
+
 @end
 /**********************************************
  ****                Player                ****
  **********************************************/
 
 @implementation Player
-
-- (instancetype)init
-{
-    if (self = [super init]) {
-        [self setColor:NONE];
-    }
-    return self;
-}
 
 - (instancetype)initWithColor:(Color)color
 {
@@ -66,14 +73,12 @@
     [self setBoardsize:[settings board_size]];
     [self setHandicap:[settings handicap]];
     [self setKomi:[settings komi]];
-    
-    [self setPlayer1:[[Player alloc] init]];
-    [self setPlayer2:[[Player alloc] init]];
-    [[self player1] setColor:BLACK];
-    [[self player2] setColor:WHITE];
+
+    [self setPlayer1:[[Player alloc] initWithColor:BLACK]];
+    [self setPlayer2:[[Player alloc] initWithColor:WHITE]];
     [[self player1] setNext:[self player2]];
     [[self player1] setNext:[self player1]];
-    
+
     return self;
 }
 

@@ -41,7 +41,9 @@ typedef enum {
 
 @property (readonly) StoneViewController *stoneVC;
 @property (readonly) NSArray *captured;
+@property (readonly) char *rec;
 - (instancetype)initWithCurrentMove:(StoneViewController*)stonevc CapturedArray:(NSArray*)capturedArray;
+- (NSString *)toString;
 @end
 
 /**********************************************

@@ -20,6 +20,6 @@
 @property (assign) NSInteger board_size;
 @property (assign) GameMode mode;    // 0: man-man; 1: man-machine; 2: machine-man
 @property (assign) NSInteger handicap;
-@property (assign) NSInteger komi;
+@property (assign) CGFloat komi;
 @property (assign) BOOL showHistory;
 @end

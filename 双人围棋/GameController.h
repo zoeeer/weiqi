@@ -32,10 +32,10 @@
 @property GameState gameState;
 @property (strong) NSMutableArray *moveHistory;
 @property int moveCount;
-//@property NSMutableArray history;
 
 - (instancetype)initWithSettings:(Settings *)settings;
 - (void)run;
+- (void)boardClickedAt:(Coord)aCoord;
 
 // Game Judgements
 - (BOOL)isValidCoord:(Coord)aCoord;
@@ -45,8 +45,9 @@
 - (BOOL)isCaptured:(Coord)coord;
 - (void) removeStones:(NSArray*)stoneArray;
 
-- (void)boardClickedAt:(Coord)aCoord;
-
+// Game Controls
 - (void)toggleShowHistory:(BOOL)showHistory;
 - (int)takeBackMoveFor:(Player*)player;
+
+- (NSString*)toString;
 @end

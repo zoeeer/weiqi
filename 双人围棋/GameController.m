@@ -268,4 +268,20 @@
     
 }
 
+- (NSString*)toString
+{
+    NSMutableString* gameString = [[NSMutableString alloc] init];
+    [gameString appendFormat:@"[Date]%@\n", [[NSDate date] descriptionWithLocale:[NSLocale currentLocale]]];
+    [gameString appendFormat:@"[Black]%@\n", [[self player1] name]];
+    [gameString appendFormat:@"[White]%@\n", [[self player2] name]];
+    [gameString appendFormat:@"[Size]%ld\n", boardsize];
+    [gameString appendFormat:@"[Komi]%.1f\n", [[self settings] komi]];
+    [gameString appendFormat:@"[Handicap]%ld\n", [[self settings] handicap]];
+    for (id record in [self moveHistory]) {
+        [gameString appendFormat:@"%@\n", [record toString]];
+    }
+    
+    return gameString;
+}
+
 @end

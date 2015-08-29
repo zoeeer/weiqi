@@ -161,8 +161,24 @@
     }
 }
 
-//- (void)save
+- (IBAction)save:(id)sender
+{
+    if ([self fileURL] == nil) {
+        [self saveAs];
+    }
+    else {
+        NSString* content = [gameController toString];
+        [content writeToURL:[self fileURL] atomically:NO encoding:NSUTF8StringEncoding error:nil];
+
+    }
+}
+
 - (IBAction)saveAs:(id)sender
+{
+    [self saveAs];
+}
+
+- (void)saveAs
 {
     NSWindow* window = [self window];
     NSString* defaultName = @"Untitled.sht";
@@ -173,9 +189,11 @@
         if (result == NSFileHandlingPanelOKButton)
         {
             NSURL*  fileURL = [panel URL];
+            [self setFileURL:fileURL];
             //NSFileManager*fm = [NSFileManager defaultManager];
             // Write the contents in the new format.
-            NSString* content = @"Hello my first weiqi game - test\n";
+            //NSString* content = @"Hello my first weiqi game - test\n";
+            NSString* content = [gameController toString];
             [content writeToURL:fileURL atomically:NO encoding:NSUTF8StringEncoding error:nil];
         }
     }];

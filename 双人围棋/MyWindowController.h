@@ -19,6 +19,7 @@
 }
 
 //@property GameController *gameController;
+@property NSURL* fileURL;
 @property (strong) Settings* settings;
 
 - (IBAction)start:(id)sender;
@@ -29,5 +30,7 @@
 - (void)start;
 
 // file access
+- (IBAction)save:(id)sender;
 - (IBAction)saveAs:(id)sender;
+- (void)saveAs;
 @end
